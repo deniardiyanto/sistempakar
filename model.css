@@ -1,0 +1,473 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+
+a{
+	text-decoration: none;
+}
+
+.text{
+	color : #1a2c43;
+}
+
+.header{
+	height: 400px;
+	width: 100%;
+	background: 
+		linear-gradient(
+			rgba(0, 0, 0, 0.7),
+			rgba(0, 0, 0, 0.3)
+		),
+		url(gambar/k3.jpg) no-repeat;
+		background-size: cover;
+	position: relative;
+	overflow: hidden;
+	-webkit-transition: all 0.5s ease; /* Google Chrome */
+	-moz-transition: all 0.5s ease; /* Mozilla Firefox */
+	-o-transition: all 0.5s ease; /* Browser Opera */
+	-ms-transition: all 0.5s ease; /* Internet Explorer 10 */
+	transition: all 0.5s ease; /* Global */
+}
+
+.header:hover{
+	background: 
+		linear-gradient(
+			rgba(0, 0, 0, 0.99),
+			rgba(0, 0, 0, 0.5)
+		),
+		url(gambar/k3.jpg) no-repeat;
+		background-size: cover;
+	position: relative;
+}
+
+.headerlog1{
+	width: 100%;
+	height: 40px;
+	background-color: #1a2c43;
+}
+
+.akun{
+	color : white;
+	font-size: 14px;
+	margin-top: 10px;
+	margin-right: 100px;
+}
+
+.buttontrans{
+	background-color: transparent;
+	color: white;
+	text-decoration: none;
+	border: 0px;
+}
+
+.tombol{
+	width: 35px;
+    padding: 3px 35px;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    font-size: 14px;
+}
+
+.tombol:hover{
+	width: 36px;
+	padding: 4px 36px;
+	font-size: 15px;
+	color: gold;
+	border: 1px solid gold;
+	text-decoration: none;
+}
+
+.tombolhitam{
+	width: 35px;
+    padding: 3px 35px;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 25px;
+    color: #073c64;
+    text-decoration: none;
+    border: 1px solid #073c64;
+}
+
+.tombolhitam:hover{
+	width: 36px;
+	padding: 4px 36px;
+	font-size: 15px;
+	color: white;
+	border: 1px solid teal;
+	background-color: teal;
+}
+
+.headerlog2{
+	width: 100%;
+	height: 80px;
+	background-color: #073c64;
+	display: inline-flex;
+}
+
+.divlogo{
+	width: 160px;
+	height: 120px;
+	margin-left: 100px;
+	background-color: #1a2c43;
+}
+
+.logo{
+	width: 185px;
+	margin-left: -15px;
+	margin-top: -65px;
+}
+
+.divmenu{
+	padding-top: 25px;
+	padding-left: 20px;
+}
+
+.menu2{
+	font-size: 13px;
+	color: white;
+}
+
+.menu2:hover{
+	color: gold;
+}
+
+.gambar{
+	position: relative;
+	overflow: hidden;
+}
+
+.gambar1{
+	width: 100%;
+}
+
+.menu{
+	font-size: 40px;
+	color: white;
+	padding-top: 10px;
+	-webkit-transition: width 2s, height 2s, font-size 0.3s;
+	transition: width 2s, height 2s, font-size 0.3s;
+}
+
+.menu:hover{
+	color: teal;
+	font-size: 35px;
+}
+
+.judul{
+	width: 500px;
+	height: 150px;
+	border: solid;
+	border-width: 5px;
+	border-color: white;
+	font-size: 45px;
+	color: white;
+	margin-left: 30%;
+	padding-left: 20px;
+	margin-top: 70px;
+}
+
+.hi{
+	background-color: teal;
+	width: 100px;
+	height: 100px;
+	border-radius: 50px 50px 50px 50px;
+	margin-left: 47%;
+	margin-top: 100px;
+}
+
+.welcome{
+	color: white;
+	font-size: 20px;
+	padding-top: 35px;
+	padding-left: 9px;
+}
+
+.tentang{
+	color: gray;
+	text-align: center;
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-top: 50px;
+}
+
+.tentang:hover{
+	color: teal;
+}
+
+.garis{
+	width: 94%;
+	height: 1px;
+	background-color: teal;
+	margin-left: 3%;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.garispendek{
+	width: 70px;
+	height: 3px;
+	background-color: teal;
+	margin-top: 0;
+}
+
+.gold{
+	background-color: gold;
+}
+
+.m-190px{
+	margin-left: -190px; 
+	margin-bottom:20px;
+}
+
+.m100px{
+	margin-left: 100px;
+}
+
+.garislogin{
+	margin-top: 10px;
+	margin-left: 0px;
+}
+
+.login{
+	width: 300px;
+	height: 300px;
+	display: inline-flex;
+}
+
+.konten2{
+	width: 100%;
+	height: 180px;
+	background-color: #073c64;
+}
+
+.gsantri{
+	height: 180px;
+	overflow: hidden;
+	margin-top: -3px;
+	margin-right: -3px;
+}
+
+.konten2 h1{
+	color:white;
+	margin-bottom: 0;
+}
+
+.konten2 p{
+	color:white;
+	margin-top: 0px;
+	font-size: 13px;
+}
+
+.user{
+	color: black;
+}
+
+.gmenu{
+	width: 150px;
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+}
+
+.gmenu:hover{
+	width: 200px;
+}
+
+.ortu{
+	background: 
+		url() no-repeat;
+		background-size: cover;
+}
+
+.ortu:hover{
+	background-image: none;
+	background: 
+		linear-gradient(
+			rgba(26, 128, 127, 0.8),
+			rgba(26, 128, 127, 0.8),
+			rgba(26, 128, 127, 0.8)
+		),
+		url() no-repeat;
+		background-size: cover;
+}
+
+.santri{
+	background: 
+		url() no-repeat;
+		background-size: cover;
+}
+
+.santri:hover{
+	background-image: none;
+	background: 
+		linear-gradient(
+			rgba(26, 128, 127, 0.8),
+			rgba(26, 128, 127, 0.8),
+			rgba(26, 128, 127, 0.8)
+		),
+		url() no-repeat;
+		background-size: cover;
+}
+
+.uztaz{
+	background: 
+		url() no-repeat;
+		background-size: cover;
+}
+
+.uztaz:hover{
+	background-image: none;
+	background: 
+		linear-gradient(
+			rgba(26, 128, 127, 0.8),
+			rgba(26, 128, 127, 0.8),
+			rgba(26, 128, 127, 0.8)
+		),
+		url() no-repeat;
+		background-size: cover;
+}
+
+.judullogin{
+	font-size: 40px;
+	color: teal;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.judullogin2{
+	color: gray;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.framevideo{
+	width: 100%;
+	height: 650px;
+	background-color: #073c64;
+	margin-top: 100px;
+}
+
+.video{
+	
+	margin-left: 100px;
+	padding-top: 40px;
+}
+
+.judulvideo{
+	color: white;
+	font-size: 25px;
+	margin-left: 100px;
+	margin-bottom: 20px;
+	margin-top: 50px;
+}
+
+.prafooter{
+	width: 100%;
+	height: 400px;
+	background: 
+		linear-gradient(
+			rgba(0, 0, 0, 0.6),
+			rgba(0, 0, 0, 0.6)
+		),
+		url() no-repeat;
+		background-size: cover;
+	position: relative;
+	margin-top: 0px;
+	padding-top: 10px;
+}
+
+.judul2{
+	font-size: 110px;
+	color: white;
+	margin-left: 5%;
+	padding-left: 20px;
+}
+
+
+.konten{
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-top: 50px;
+}
+
+.hal{
+	color : teal;
+}
+
+.judulkonten{
+	margin-top: 0;
+	color: teal;
+	font-size: 30px;
+}
+
+.isi{
+	color : #1a2c43;
+	text-align: justify;
+}
+
+
+.footer{
+	height: 300px;
+	width: 100%;
+	background-color: #073c64;
+	color : white;
+	margin-top: -30px;
+}
+
+.fo1{
+	padding-top: 70px;
+	padding-left: 100px;
+	font-size: 20px;
+}
+
+.fo2{
+	padding-left: 100px;
+	font-size: 15px;
+	text-decoration: none;
+}
+
+.link{
+	color : white;
+}
+
+.link:hover{
+	color : silver;
+}
+
+.link2:hover{
+	color : teal;
+}
+
+.footer2{
+	width: 100%;
+	height: 50px;
+	background-color: #1a2c43;
+}
+
+.textfooter2{
+	margin-top: 0;
+	padding-top: 17px;
+	margin-left: 100px;
+	color : white;
+	font-size: 12px;
+}
+
+.fa-phone{
+	color : white;
+}
+
+.fa-globe{
+	color : white;
+}
+
+.fa-laptop{
+	color : white;
+}

@@ -1,0 +1,30 @@
+.divlogin{
+	background-color: aliceblue;
+	color: black;
+	padding: 50px;
+}
+
+.kanan{
+	width: 800px;
+	height: 400px;
+	text-align: center;
+}
+
+.judullogin{
+	font-size: 30px;
+	color : black;
+}
+
+.texttengah{
+	align-self: center;
+	padding-top: 150px;
+	font-size: 50px;
+	color : silver;
+}
+
+.texttengah2{
+	align-self: center;
+	margin-top: -25px;
+	font-size: 15px;
+	color : silver;
+}
