@@ -245,6 +245,10 @@ a{
 	height: 180px;
 	background-color: #073c64;
 }
+.textf{
+	font-size: 30px;
+	text-align: center;
+}
 
 .gsantri{
 	height: 180px;
@@ -415,7 +419,7 @@ a{
 
 
 .footer{
-	height: 300px;
+	height: 100px;
 	width: 100%;
 	background-color: #073c64;
 	color : white;

@@ -15,8 +15,7 @@
 					<td width="350px"><a href="admin/login.php" class="menu">L O G I N</a></td>
 				</tr>
 			</table>
-		</div>
-		
+		</div>	
 	</div>
 	<div>
 		<div class="konten">
@@ -24,25 +23,13 @@
 			<hr>
 			<p class="judulkonten"><b>KONSULTASI</b></p>
 			<div class="garispendek gold"></div>
-
-
-
-
-
-
- 
 		</div>
+		<br>
 	</div>
-	 <div class="konten2">
-    <table width="100%">
-      <tr>
-        <td width="80%" height="150px" align="center">
-          <h1>S I S T E M  P A K A R</h1>
-          <p>DIAGNOSA PENYAKIT PADA ANJING</p>
-        </td>
-        
-      </tr>
-    </table>
-  </div>
 </body>
+
+<div class="footer">
+	<p class="textf" >S I S T E M  P A K A R</p>
+  	<p align="center">DIAGNOSA PENYAKIT PADA ANJING</p>  
+</div>
 </html>
