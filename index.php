@@ -1,3 +1,6 @@
+<?php
+include'functions.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +13,7 @@
 		<div class="menu">
 			<table align="center">
 				<tr align="center">
-					<td width="350px"><a href="index.html" class="menu">B E R A N D A</a></td>
+					<td width="350px"><a href="index.php" class="menu">B E R A N D A</a></td>
 					<td width="350px"><a href="?m=pasien_add" class="menu"> K O N S U L T A S I</a></td>
 					<td width="350px"><a href="admin/login.php" class="menu">L O G I N</a></td>
 				</tr>
@@ -41,7 +44,16 @@
 			</tr>
 		</table>
 	</div>
-
+	<div class="container">
+    <?php
+        if(in_array($mod, array('diagnosa', 'gejala', 'pengetahuan', 'password')) && !$_SESSION[login])
+            redirect_js('?m=login');
+        if(file_exists($mod.'.php'))
+            include $mod.'.php';
+        else
+            include 'home.php';
+    ?>
+    </div>
 	<div class="footer2" align="center">
 
 		
