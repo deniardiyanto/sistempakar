@@ -27,7 +27,7 @@ function validasi(form){
   }
 </script>
 
-<form onSubmit="return validasi(this)" method="post" name="form1" target="_self" action="?m=konsultasi">
+
 <table class="tab" width="415" style="border:0px;"  border="0" align="center">
     <tr> 
       <td colspan="2"><div align="center"></div></td>
@@ -67,7 +67,7 @@ function validasi(form){
         <input type="reset" name="Submit2" value="Reset" /></td>
     </tr>
   </table>
-</form>
+
  </div>
                 <div class="cleared"></div>
                 </div>
@@ -77,50 +77,41 @@ function validasi(form){
 </div>
 
 
-
-<form>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+<div class="container">
+<form class="form-horizontal" onSubmit="return validasi(this)" method="post" name="form1" target="_self" action="?m=konsultasi">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="nama">Nama:</label>
+      <div class="col-sm-10">
+        <input name="TxtNama" id="TxtNama" type="text" size="35" maxlength="30" class="form-control" placeholder="Masukan Nama">
+      </div>
     </div>
-    <div class="form-group col-md-6">
-      <label for="inputPassword4">Password</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="inputAddress">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-  </div>
-  <div class="form-group">
-    <label for="inputAddress2">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputCity">City</label>
-      <input type="text" class="form-control" id="inputCity">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="inputState">State</label>
-      <select id="inputState" class="form-control">
-        <option selected>Choose...</option>
-        <option>...</option>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="jk">Jenis Kelamin:</label>
+      <div class="col-sm-10">
+      <select name="cbojk" id="cbojk" class="custom-select" required>
+      <option value="0" selected="selected">- Jenis Kelamin -</option>
+      <option value="Laki-laki">Laki-laki</option>
+      <option value="Wanita">Wanita</option>
       </select>
+      </div>
     </div>
-    <div class="form-group col-md-2">
-      <label for="inputZip">Zip</label>
-      <input type="text" class="form-control" id="inputZip">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="umur">Umur:</label>
+      <div class="col-sm-10">
+        <input name="TxtUmur" id="TxtUmur" type="text" size="2" maxlength="3" class="form-control" placeholder="Masukan Umur">
+      </div>
     </div>
-  </div>
-  <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Email:</label>
+      <div class="col-sm-10">
+        <input type="text" name="textemail" id="textemail" size="25" maxlength="25" class="form-control" placeholder="Masukan Email" name="email">
+      </div>
     </div>
-  </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
-</form>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" name="Submit" value="Daftar" class="btn btn-primary">Daftar</button>
+        <button type="reset" name="Submit2" value="Reset" class="btn btn-default">Reset</button>
+      </div>
+    </div>
+  </form>
+</div>
