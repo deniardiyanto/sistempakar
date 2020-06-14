@@ -1,5 +1,4 @@
 <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
-<link href="assets/css/general.css" rel="stylesheet"/>
 <?php
     $success = false;
     $row = $db->get_row("SELECT * FROM tb_konsultasi ORDER BY ID DESC LIMIT 1");
@@ -38,11 +37,11 @@
     
 ?>
 <div class="page-header">
-    <h1>Konsultasi</h1>
 </div>
 
 <?php if($success) :?>
 <div class="panel panel-primary">
+    <br>
     <div class="panel-heading"><h3 class="panel-title">Hasil Konsultasi</h3></div>
     <div class="panel-body text-center">
         <p>Adapun penyakit yang diderita kucing adalah</p>
@@ -95,4 +94,5 @@ if($_POST){
 
 </div>
 <?php endif?>
+<br>
     
