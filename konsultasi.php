@@ -76,6 +76,8 @@ if($_POST){
 </div>
 <?php else:?>
 <div class="panel panel-primary">
+    <br>
+    <div class="textf">
     <div class="panel-heading"><h3 class="panel-title">Jawablah pertanyaan berikut ini</h3></div>
     <div class="panel-body">
         <h3>Apakah <?=strtolower($row->nama_gejala)?>?</h3>
@@ -90,6 +92,7 @@ if($_POST){
                 <?php endif?>
             </p>
         </form>
+    </div>
     </div>
 
 </div>
