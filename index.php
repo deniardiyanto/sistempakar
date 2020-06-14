@@ -7,6 +7,7 @@ include'functions.php';
 	<title>sistem pakar</title>
 	<link rel="stylesheet" type="text/css" href="model.css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="canonical" href="http://<?=$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']?>" />
 </head>
 <body>
 	<div class="header">
@@ -46,12 +47,12 @@ include'functions.php';
 	</div>
 	<div class="container">
     <?php
-        if(in_array($mod, array('diagnosa', 'gejala', 'pengetahuan', 'password')) && !$_SESSION[login])
-            redirect_js('?m=login');
+        // if(in_array($mod, array('diagnosa', 'gejala', 'pengetahuan', 'password')) && !$_SESSION[login])
+        //     redirect_js('?m=login');
         if(file_exists($mod.'.php'))
             include $mod.'.php';
         else
-            include 'home.php';
+            include 'index.php';
     ?>
     </div>
 	<div class="footer2" align="center">
