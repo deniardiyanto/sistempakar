@@ -6,17 +6,4 @@
 		</p>
 	</div>
 	<br><br><br>
-	<div class="konten2">
-		<table width="100%">
-			<tr>
-				<td width="80%" height="150px" align="center">
-					
-					<h1>S I S T E M  P A K A R</h1>
-					<p>DIAGNOSA PENYAKIT PADA ANJING</p>
-				</td>
-					
-				</td>
-				
-			</tr>
-		</table>
-	</div>
+	

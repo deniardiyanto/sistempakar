@@ -1,3 +1,5 @@
+<link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="assets/css/general.css" rel="stylesheet"/>
 <?php
     $success = false;
     $row = $db->get_row("SELECT * FROM tb_konsultasi ORDER BY ID DESC LIMIT 1");
