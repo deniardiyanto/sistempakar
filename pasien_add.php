@@ -1,6 +1,6 @@
 <br>
 <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
-<h2 class="textf">DATA PENGGUNA</h2>
+<h2 class="textf">DATA PASIEN</h2>
 <div class="art-postcontent">
 
 <script type="text/javascript">
@@ -9,21 +9,18 @@ $(document).ready(function(){
   })
 function validasi(form){
   if(form.TxtNama.value==""){
-    alert("Masukkan Nama Kucing!");
+    alert("Masukkan Nama Anjing!");
     form.TxtNama.focus(); return false;
     }else if(form.cbojk.value==0){
-    alert("Masukkan jenis kelamin !");
+    alert("Masukkan jenis kelamin!");
     form.cbojk.focus(); return false; 
     }else if(form.TxtUmur.value==""){
-      alert("Masukkan umur anda !");
-      form.TxtUmur.focus(); return false;
-      }else if(form.TxtAlamat.value==""){
-        alert("Masukkan alamat anda !");
-        form.TxtAlamat.focus(); return false;
-        }else if(form.textemail.value==""){
-          alert("Masukkan email !");
-          form.textemail.focus(); return false;
-          }
+    alert("Masukkan umur!");
+    form.TxtUmur.focus(); return false;
+    }else if(form.textemail.value==""){
+    alert("Masukkan email !");
+    form.textemail.focus(); return false;
+    }
     form.submit();
   }
 </script>
@@ -41,21 +38,21 @@ function validasi(form){
       <div class="col-sm-3">
       <select name="cbojk" id="cbojk" class="custom-select" required>
       <option value="0" selected="selected">- Jenis Kelamin -</option>
-      <option value="Laki-laki">Laki-laki</option>
-      <option value="Wanita">Wanita</option>
+      <option value="Jantan">Jantan</option>
+      <option value="Betina">Betina</option>
       </select>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="umur">Umur:</label>
-      <div class="col-sm-1">
-        <input name="TxtUmur" id="TxtUmur" type="text" size="2" maxlength="3" class="form-control" placeholder="-">
+      <div class="col-sm-2">
+        <input name="TxtUmur" id="TxtUmur" type="text" size="1" maxlength="3" class="form-control" placeholder="Tahun">
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Email:</label>
       <div class="col-sm-5">
-        <input type="text" name="textemail" id="textemail" size="25" maxlength="25" class="form-control" placeholder="Masukan Email" name="email">
+        <input type="text" name="textemail" id="textemail" size="25" maxlength="25" class="form-control" placeholder="nama@mail.com">
       </div>
     </div>
     <div class="form-group">        
