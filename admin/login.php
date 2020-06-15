@@ -49,7 +49,7 @@
 							<tr>
 								<td height="60px" align="left">
 									<button type="submit" class="btn btn-success btn-md">Login</button>
-									<a href="../index.html" class="btn btn-danger btn-md"">Kembali</a>
+									<a href="../index.php" class="btn btn-danger btn-md"">Kembali</a>
 								</td>
 							</tr>
 						</table>
@@ -73,8 +73,6 @@
 		</table>
 	</div>
 	</div>
-	<div class="footer2">
-	
 	</div>
 </body>
 </html>

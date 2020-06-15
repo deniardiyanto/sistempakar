@@ -89,7 +89,7 @@
                             		echo'<option value="'.$datajika['nama_gejala'].'">'.$datajika['nama_gejala'].'</option>';
                             	}
                             	?>
-                        	</select>
+                        	</select><br>
 						</td>
 					</tr>
 
@@ -107,7 +107,7 @@
                             		echo'<option value="'.$datajika['nama_gejala'].'">'.$datajika['nama_gejala'].'</option>';
                             	}
                             	?>
-                        	</select>
+                        	</select><br>
 						</td>
 					</tr>
 					<tr>
@@ -122,7 +122,7 @@
                             		echo'<option value="'.$datajika['nama_penyakit'].'">'.$datajika['nama_penyakit'].'</option>';
                             	}
                             	?>
-                        	</select>	
+                        	</select><br>	
 
 						</td>
 					</tr>
@@ -138,7 +138,7 @@
                             		echo'<option value="'.$datajika['nama_gejala'].'">'.$datajika['nama_gejala'].'</option>';
                             	}
                             	?>
-                        	</select>	
+                        	</select><br>	
 
 						</td>
 					</tr>
@@ -155,7 +155,7 @@
                             		echo'<option value="'.$datajika['nama_penyakit'].'">'.$datajika['nama_penyakit'].'</option>';
                             	}
                             	?>
-                        	</select>
+                        	</select><br>
 						</td>
 					</tr>
 					
@@ -254,8 +254,6 @@
 		</table>
 	</div>
 	</div>
-	<div class="footer2">
-	
 	</div>
 </body>
 </html>

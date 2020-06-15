@@ -73,8 +73,6 @@
 		</table>
 	</div>
 	</div>
-	<div class="footer2">
-	
 	</div>
 	</div>
 </body>

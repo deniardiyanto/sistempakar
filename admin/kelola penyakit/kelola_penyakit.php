@@ -212,8 +212,6 @@
 		</table>
 	</div>
 	</div>
-	<div class="footer2">
-	
 	</div>
 </body>
 </html>
