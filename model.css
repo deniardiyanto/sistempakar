@@ -1,80 +1,81 @@
-body{
+body {
 	margin: 0;
 	padding: 0;
 	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 }
 
-a{
+a {
 	text-decoration: none;
 }
 
-.text{
-	color : #1a2c43;
+.text {
+	color: #1a2c43;
 }
 
-.header{
+.header {
 	height: 400px;
 	width: 100%;
-	background: 
-		linear-gradient(
-			rgba(0, 0, 0, 0.7),
-			rgba(0, 0, 0, 0.3)
-		),
+	background:
+		linear-gradient(rgba(0, 0, 0, 0.7),
+			rgba(0, 0, 0, 0.3)),
 		url(gambar/k3.jpg) no-repeat;
-		background-size: cover;
+	background-size: cover;
 	position: relative;
 	overflow: hidden;
-	-webkit-transition: all 0.5s ease; /* Google Chrome */
-	-moz-transition: all 0.5s ease; /* Mozilla Firefox */
-	-o-transition: all 0.5s ease; /* Browser Opera */
-	-ms-transition: all 0.5s ease; /* Internet Explorer 10 */
-	transition: all 0.5s ease; /* Global */
+	-webkit-transition: all 0.5s ease;
+	/* Google Chrome */
+	-moz-transition: all 0.5s ease;
+	/* Mozilla Firefox */
+	-o-transition: all 0.5s ease;
+	/* Browser Opera */
+	-ms-transition: all 0.5s ease;
+	/* Internet Explorer 10 */
+	transition: all 0.5s ease;
+	/* Global */
 }
 
-.header:hover{
-	background: 
-		linear-gradient(
-			rgba(0, 0, 0, 0.99),
-			rgba(0, 0, 0, 0.5)
-		),
+.header:hover {
+	background:
+		linear-gradient(rgba(0, 0, 0, 0.99),
+			rgba(0, 0, 0, 0.5)),
 		url(gambar/k3.jpg) no-repeat;
-		background-size: cover;
+	background-size: cover;
 	position: relative;
 }
 
-.headerlog1{
+.headerlog1 {
 	width: 100%;
 	height: 40px;
 	background-color: #1a2c43;
 }
 
-.akun{
-	color : white;
+.akun {
+	color: white;
 	font-size: 14px;
 	margin-top: 10px;
 	margin-right: 100px;
 }
 
-.buttontrans{
+.buttontrans {
 	background-color: transparent;
 	color: white;
 	text-decoration: none;
 	border: 0px;
 }
 
-.tombol{
+.tombol {
 	width: 35px;
-    padding: 3px 35px;
-    background-color: transparent;
-    cursor: pointer;
-    border-radius: 25px;
-    color: white;
-    text-decoration: none;
-    border: 1px solid white;
-    font-size: 14px;
+	padding: 3px 35px;
+	background-color: transparent;
+	cursor: pointer;
+	border-radius: 25px;
+	color: white;
+	text-decoration: none;
+	border: 1px solid white;
+	font-size: 14px;
 }
 
-.tombol:hover{
+.tombol:hover {
 	width: 36px;
 	padding: 4px 36px;
 	font-size: 15px;
@@ -83,18 +84,18 @@ a{
 	text-decoration: none;
 }
 
-.tombolhitam{
+.tombolhitam {
 	width: 35px;
-    padding: 3px 35px;
-    background-color: transparent;
-    cursor: pointer;
-    border-radius: 25px;
-    color: #073c64;
-    text-decoration: none;
-    border: 1px solid #073c64;
+	padding: 3px 35px;
+	background-color: transparent;
+	cursor: pointer;
+	border-radius: 25px;
+	color: #073c64;
+	text-decoration: none;
+	border: 1px solid #073c64;
 }
 
-.tombolhitam:hover{
+.tombolhitam:hover {
 	width: 36px;
 	padding: 4px 36px;
 	font-size: 15px;
@@ -103,50 +104,49 @@ a{
 	background-color: teal;
 }
 
-.headerlog2{
+.headerlog2 {
 	width: 100%;
 	height: 80px;
 	background-color: #073c64;
 	display: inline-flex;
 }
 
-.divlogo{
+.divlogo {
 	width: 160px;
-	height: 120px;
+	height: 160px;
 	margin-left: 100px;
-	background-color: #1a2c43;
 }
 
-.logo{
+.logo {
 	width: 185px;
 	margin-left: -15px;
 	margin-top: -65px;
 }
 
-.divmenu{
+.divmenu {
 	padding-top: 25px;
 	padding-left: 20px;
 }
 
-.menu2{
+.menu2 {
 	font-size: 13px;
 	color: white;
 }
 
-.menu2:hover{
+.menu2:hover {
 	color: gold;
 }
 
-.gambar{
+.gambar {
 	position: relative;
 	overflow: hidden;
 }
 
-.gambar1{
+.gambar1 {
 	width: 100%;
 }
 
-.menu{
+.menu {
 	font-size: 40px;
 	color: white;
 	padding-top: 10px;
@@ -154,12 +154,12 @@ a{
 	transition: width 2s, height 2s, font-size 0.3s;
 }
 
-.menu:hover{
+.menu:hover {
 	color: teal;
 	font-size: 35px;
 }
 
-.judul{
+.judul {
 	width: 500px;
 	height: 150px;
 	border: solid;
@@ -172,7 +172,7 @@ a{
 	margin-top: 70px;
 }
 
-.hi{
+.hi {
 	background-color: teal;
 	width: 100px;
 	height: 100px;
@@ -181,14 +181,14 @@ a{
 	margin-top: 100px;
 }
 
-.welcome{
+.welcome {
 	color: white;
 	font-size: 20px;
 	padding-top: 35px;
 	padding-left: 9px;
 }
 
-.tentang{
+.tentang {
 	color: gray;
 	text-align: center;
 	margin-left: 100px;
@@ -196,11 +196,11 @@ a{
 	margin-top: 50px;
 }
 
-.tentang:hover{
+.tentang:hover {
 	color: teal;
 }
 
-.garis{
+.garis {
 	width: 94%;
 	height: 1px;
 	background-color: teal;
@@ -209,71 +209,72 @@ a{
 	margin-bottom: 50px;
 }
 
-.garispendek{
+.garispendek {
 	width: 70px;
 	height: 3px;
 	background-color: teal;
 	margin-top: 0;
 }
 
-.gold{
+.gold {
 	background-color: gold;
 }
 
-.m-190px{
-	margin-left: -190px; 
-	margin-bottom:20px;
+.m-190px {
+	margin-left: -190px;
+	margin-bottom: 20px;
 }
 
-.m100px{
+.m100px {
 	margin-left: 100px;
 }
 
-.garislogin{
+.garislogin {
 	margin-top: 10px;
 	margin-left: 0px;
 }
 
-.login{
+.login {
 	width: 300px;
 	height: 300px;
 	display: inline-flex;
 }
 
-.konten2{
+.konten2 {
 	width: 100%;
 	height: 180px;
 	background-color: #073c64;
 }
-.textf{
+
+.textf {
 	font-size: 45px;
 	text-align: center;
 	font-family: "Times New Roman", Times, serif;
 }
 
-.gsantri{
+.gsantri {
 	height: 180px;
 	overflow: hidden;
 	margin-top: -3px;
 	margin-right: -3px;
 }
 
-.konten2 h1{
-	color:white;
+.konten2 h1 {
+	color: white;
 	margin-bottom: 0;
 }
 
-.konten2 p{
-	color:white;
+.konten2 p {
+	color: white;
 	margin-top: 0px;
 	font-size: 13px;
 }
 
-.user{
+.user {
 	color: black;
 }
 
-.gmenu{
+.gmenu {
 	width: 150px;
 	transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease;
@@ -282,91 +283,85 @@ a{
 	-ms-transition: all 0.5s ease;
 }
 
-.gmenu:hover{
+.gmenu:hover {
 	width: 200px;
 }
 
-.ortu{
-	background: 
+.ortu {
+	background:
 		url() no-repeat;
-		background-size: cover;
+	background-size: cover;
 }
 
-.ortu:hover{
+.ortu:hover {
 	background-image: none;
-	background: 
-		linear-gradient(
+	background:
+		linear-gradient(rgba(26, 128, 127, 0.8),
 			rgba(26, 128, 127, 0.8),
-			rgba(26, 128, 127, 0.8),
-			rgba(26, 128, 127, 0.8)
-		),
+			rgba(26, 128, 127, 0.8)),
 		url() no-repeat;
-		background-size: cover;
+	background-size: cover;
 }
 
-.santri{
-	background: 
+.santri {
+	background:
 		url() no-repeat;
-		background-size: cover;
+	background-size: cover;
 }
 
-.santri:hover{
+.santri:hover {
 	background-image: none;
-	background: 
-		linear-gradient(
+	background:
+		linear-gradient(rgba(26, 128, 127, 0.8),
 			rgba(26, 128, 127, 0.8),
-			rgba(26, 128, 127, 0.8),
-			rgba(26, 128, 127, 0.8)
-		),
+			rgba(26, 128, 127, 0.8)),
 		url() no-repeat;
-		background-size: cover;
+	background-size: cover;
 }
 
-.uztaz{
-	background: 
+.uztaz {
+	background:
 		url() no-repeat;
-		background-size: cover;
+	background-size: cover;
 }
 
-.uztaz:hover{
+.uztaz:hover {
 	background-image: none;
-	background: 
-		linear-gradient(
+	background:
+		linear-gradient(rgba(26, 128, 127, 0.8),
 			rgba(26, 128, 127, 0.8),
-			rgba(26, 128, 127, 0.8),
-			rgba(26, 128, 127, 0.8)
-		),
+			rgba(26, 128, 127, 0.8)),
 		url() no-repeat;
-		background-size: cover;
+	background-size: cover;
 }
 
-.judullogin{
+.judullogin {
 	font-size: 40px;
 	color: teal;
 	margin-bottom: 0;
 	margin-top: 0;
 }
 
-.judullogin2{
+.judullogin2 {
 	color: gray;
 	margin-top: 0;
 	margin-bottom: 20px;
 }
 
-.framevideo{
+.framevideo {
 	width: 100%;
 	height: 650px;
 	background-color: #073c64;
 	margin-top: 100px;
 }
 
-.video{
-	
+.video {
+
 	margin-left: 100px;
 	padding-top: 40px;
 }
 
-.judulvideo{
+.judulvideo {
 	color: white;
 	font-size: 25px;
 	margin-left: 100px;
@@ -374,22 +369,20 @@ a{
 	margin-top: 50px;
 }
 
-.prafooter{
+.prafooter {
 	width: 100%;
 	height: 400px;
-	background: 
-		linear-gradient(
-			rgba(0, 0, 0, 0.6),
-			rgba(0, 0, 0, 0.6)
-		),
+	background:
+		linear-gradient(rgba(0, 0, 0, 0.6),
+			rgba(0, 0, 0, 0.6)),
 		url() no-repeat;
-		background-size: cover;
+	background-size: cover;
 	position: relative;
 	margin-top: 0px;
 	padding-top: 10px;
 }
 
-.judul2{
+.judul2 {
 	font-size: 110px;
 	color: white;
 	margin-left: 5%;
@@ -397,82 +390,82 @@ a{
 }
 
 
-.konten{
+.konten {
 	margin-left: 100px;
 	margin-right: 100px;
 	margin-top: 50px;
 }
 
-.hal{
-	color : teal;
+.hal {
+	color: teal;
 }
 
-.judulkonten{
+.judulkonten {
 	margin-top: 0;
 	color: teal;
 	font-size: 30px;
 }
 
-.isi{
-	color : #1a2c43;
+.isi {
+	color: #1a2c43;
 	text-align: justify;
 }
 
 
-.footer{
+.footer {
 	height: 100px;
 	width: 100%;
 	background-color: #073c64;
-	color : white;
+	color: white;
 	margin-top: -30px;
 }
 
-.fo1{
+.fo1 {
 	padding-top: 70px;
 	padding-left: 100px;
 	font-size: 20px;
 }
 
-.fo2{
+.fo2 {
 	padding-left: 100px;
 	font-size: 15px;
 	text-decoration: none;
 }
 
-.link{
-	color : white;
+.link {
+	color: white;
 }
 
-.link:hover{
-	color : silver;
+.link:hover {
+	color: silver;
 }
 
-.link2:hover{
-	color : teal;
+.link2:hover {
+	color: teal;
 }
 
-.footer2{
+.footer2 {
 	width: 100%;
 	height: 50px;
 	background-color: #1a2c43;
 }
 
-.textfooter2{
+.textfooter2 {
 	margin-top: 0;
 	padding-top: 17px;
 	margin-left: 100px;
-	color : white;
+	color: white;
 	font-size: 12px;
 }
 
-.fa-phone{
-	color : white;
+.fa-phone {
+	color: white;
 }
 
-.fa-globe{
-	color : white;
+.fa-globe {
+	color: white;
 }
 
-.fa-laptop{
-	color : white;
+.fa-laptop {
+	color: white;
 }

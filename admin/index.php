@@ -28,9 +28,10 @@
 		</table>
 	</div>
 	<div class="headerlog2">
-	<a <div class="divlogo">
-		
-		</div></a>
+	<div class="divlogo">
+	<img class="img-thumbnail"
+        src="logo-admin.jpg"/>
+	</div>
 		<div class="divmenu">
 			<table>
 				
@@ -43,16 +44,20 @@
 			<table>
 				<tr>
 					<td width="250px" height="250px">
-						<a href="kelola admin/kelola_admin.php"><div class="menuadmin"><p class="mn">ADMIN</p></div></a>
+						<a href="kelola admin/kelola_admin.php"><div class="menuadmin"><img class="img-thumbnail"
+        				src="admin.jpg"/><p class="mn">ADMIN</p></div></a>
 					</td>
 					<td width="250px" height="250px">
-						<a href="kelola gejala/kelola_gejala.php"><div class="menuadmin"><p class="mn">GEJALA</p></div></a>
+						<a href="kelola gejala/kelola_gejala.php"><div class="menuadmin"><img class="img-thumbnail"
+        				src="gejala.jpg"/><p class="mn">GEJALA</p></div></a>
 					</td>
 					<td width="250px" height="250px">
-						<a href="kelola penyakit/kelola_penyakit.php"><div class="menuadmin"><p class="mn">PENYAKIT</p></div></a>
+						<a href="kelola penyakit/kelola_penyakit.php"><div class="menuadmin"><img class="img-thumbnail"
+        				src="penyakit.jpg"/><p class="mn">PENYAKIT</p></div></a>
 					</td>
 					<td width="250px" height="250px">
-						<a href="kelola aturan/kelola_aturan.php"><div class="menuadmin"><p class="mn">ATURAN</p></div></a>
+						<a href="kelola aturan/kelola_aturan.php"><div class="menuadmin"><img class="img-thumbnail"
+        				src="aturan.jpg"/><p class="mn">ATURAN</p></div></a>
 					</td>
 				</tr>
 			</table>
