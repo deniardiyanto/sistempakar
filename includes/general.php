@@ -9,6 +9,23 @@ function set_value($key = null, $default = null){
     
     return $default;
 }
+//     $konektor = mysqli_connect("localhost","root","","sp_fc");
+//     $sql = "SELECT max(id_pengguna) FROM pengguna";
+// 	$queri = mysqli_query($konektor,$sql) or die (mysqli_error());
+ 
+// 	$idp = mysqli_fetch_array($queri);
+ 
+// 	if($idp){
+// 		$nilai = substr($idp[0], 1);
+// 		$kode = (int) $nilai;
+ 
+// 		//tambahkan sebanyak + 1
+// 		$kode = $kode + 1;
+// 		$auto_kode = "P" .str_pad($kode, 4, "0",  STR_PAD_LEFT);
+// 	} else {
+// 		$auto_kode = "P0001";
+//   }
+
 
 function kode_oto($field, $table, $prefix, $length){
     global $db;

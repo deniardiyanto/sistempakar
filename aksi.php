@@ -19,95 +19,54 @@ $urls  = array(
 
  
     /** LOGIN */ 
-    if ($mod=='login'){
-        $user = esc_field($_POST[user]);
-        $pass = esc_field($_POST[pass]);
+    // if ($mod=='login'){
+    //     $user = esc_field($_POST[user]);
+    //     $pass = esc_field($_POST[pass]);
         
-        $row = $db->get_row("SELECT * FROM tb_admin WHERE user='$user' AND pass='$pass'");
-        if($row){
-            $_SESSION[login] = $row->user;
-            redirect_js("index.php");
-        } else{
-            print_msg("Salah kombinasi username dan password.");
-        }          
-    } elseif($act=='logout'){
-        unset($_SESSION[login]);
-        header("location:index.php");
-    } elseif ($mod=='password'){
-        $pass1 = $_POST[pass1];
-        $pass2 = $_POST[pass2];
-        $pass3 = $_POST[pass3];
+    //     $row = $db->get_row("SELECT * FROM tb_admin WHERE user='$user' AND pass='$pass'");
+    //     if($row){
+    //         $_SESSION[login] = $row->user;
+    //         redirect_js("index.php");
+    //     } else{
+    //         print_msg("Salah kombinasi username dan password.");
+    //     }          
+    // } elseif($act=='logout'){
+    //     unset($_SESSION[login]);
+    //     header("location:index.php");
+    // } elseif ($mod=='password'){
+    //     $pass1 = $_POST[pass1];
+    //     $pass2 = $_POST[pass2];
+    //     $pass3 = $_POST[pass3];
         
-        $row = $db->get_row("SELECT * FROM tb_admin WHERE user='$_SESSION[login]' AND pass='$pass1'");        
+    //     $row = $db->get_row("SELECT * FROM tb_admin WHERE user='$_SESSION[login]' AND pass='$pass1'");        
         
-        if($pass1=='' || $pass2=='' || $pass3=='')
-            print_msg('Field bertanda * harus diisi.');
-        elseif(!$row)
-            print_msg('Password lama salah.');
-        elseif( $pass2 != $pass3 )
-            print_msg('Password baru dan konfirmasi password baru tidak sama.');
-        else{        
-            $db->query("UPDATE tb_admin SET pass='$pass2' WHERE user='$_SESSION[login]'");                    
-            print_msg('Password berhasil diubah.', 'success');
-        }
-    } 
+    //     if($pass1=='' || $pass2=='' || $pass3=='')
+    //         print_msg('Field bertanda * harus diisi.');
+    //     elseif(!$row)
+    //         print_msg('Password lama salah.');
+    //     elseif( $pass2 != $pass3 )
+    //         print_msg('Password baru dan konfirmasi password baru tidak sama.');
+    //     else{        
+    //         $db->query("UPDATE tb_admin SET pass='$pass2' WHERE user='$_SESSION[login]'");                    
+    //         print_msg('Password berhasil diubah.', 'success');
+    //     }
+    // } 
     
     /** DIAGNOSA */
-    elseif($mod=='diagnosa_tambah'){
-        $kode = $_POST['kode'];
-        $nama = $_POST['nama'];
-        if($kode=='' || $nama=='')
-            print_msg("Field yang bertanda * tidak boleh kosong!");
-        elseif($db->get_results("SELECT * FROM tb_diagnosa WHERE kode_diagnosa='$kode'"))
-            print_msg("Kode sudah ada!");
+    if($mod=='pasien_add'){
+        $id_pgn = $_POST['id_pgn'];
+        $nama_pgn = $_POST['nama_pgn'];
+        $jn_klm = $_POST['jn_klm'];
+        $umr = $_POST['umr'];
+        $mail = $_POST['mail'];
+        if($id_pgn=='' || $nama_pgn=='' || $jn_klm=='' || $umr=='' || $mail=='')
+            print_msg("Field tidak boleh kosong!");
         else{
-            $db->query("INSERT INTO tb_diagnosa (kode_diagnosa, nama_diagnosa) VALUES ('$kode', '$nama')");                       
-            redirect_js("index.php?m=diagnosa");
+            $db->query("INSERT INTO pengguna (id_pengguna, nama_pengguna, jn_kelamin, umur, email) VALUES ('$id_pgn', '$nama_pgn', '$jn_klm', '$umr', '$mail')");                       
+            redirect_js("index.php?m=konsultasi");
         }
-    } else if($mod=='diagnosa_ubah'){
-        $kode = $_POST['kode'];
-        $nama = $_POST['nama'];
-        if($kode=='' || $nama=='')
-            print_msg("Field yang bertanda * tidak boleh kosong!");
-        else{
-            $db->query("UPDATE tb_diagnosa SET nama_diagnosa='$nama' WHERE kode_diagnosa='$_GET[ID]'");
-            redirect_js("index.php?m=diagnosa");
-        }
-    } else if ($act=='diagnosa_hapus'){
-        $db->query("DELETE FROM tb_diagnosa WHERE kode_diagnosa='$_GET[ID]'");
-        $db->query("DELETE FROM tb_pengetahuan WHERE kode_diagnosa='$_GET[ID]'");
-        header("location:index.php?m=diagnosa");
-    } 
+    }
     
-    /** GEJALA */    
-    if($mod=='gejala_tambah'){
-        $kode = $_POST['kode'];
-        $nama = $_POST['nama'];
-        
-        if($kode=='' || $nama=='')
-            print_msg("Field bertanda * tidak boleh kosong!");
-        elseif($db->get_results("SELECT * FROM tb_gejala WHERE kode_gejala='$kode'"))
-            print_msg("Kode sudah ada!");
-        else{
-            $db->query("INSERT INTO tb_gejala (kode_gejala, nama_gejala) VALUES ('$kode', '$nama')");                       
-            redirect_js("index.php?m=gejala");
-        }                    
-    } else if($mod=='gejala_ubah'){
-        $kode = $_POST['kode'];
-        $nama = $_POST['nama'];
-        
-        if($kode=='' || $nama=='')
-            print_msg("Field bertanda * tidak boleh kosong!");
-        else{
-            $db->query("UPDATE tb_gejala SET nama_gejala='$nama' WHERE kode_gejala='$_GET[ID]'");
-            redirect_js("index.php?m=gejala");
-        }    
-    } else if ($act=='gejala_hapus'){
-        $db->query("DELETE FROM tb_gejala WHERE kode_gejala='$_GET[ID]'");
-        $db->query("DELETE FROM tb_pengetahuan WHERE kode_gejala='$_GET[ID]'");
-        header("location:index.php?m=gejala");
-    } 
-        
     /** PENGETAHUAN TAMBAH */ 
     else if ($mod=='pengetahuan_tambah'){
         $jika = $_POST[jika];
