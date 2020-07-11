@@ -28,9 +28,12 @@
 		</table>
 	</div>
 	<div class="headerlog2">
+	<a href="../index.php"><div class="divlogo">
+			<img class="img-thumbnail rounded-circle" src="../gambar/Logo-admin.jpg" class="logo">
+		</div></a>
 	<div class="divlogo">
-	<img class="img-thumbnail"
-        src="logo-admin.jpg"/>
+	<!-- <img class="img-thumbnail"
+        src="logo-admin.jpg"/> -->
 	</div>
 		<div class="divmenu">
 			<table>
