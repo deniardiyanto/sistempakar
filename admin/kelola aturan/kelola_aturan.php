@@ -209,13 +209,18 @@
 			?>
 
 			<table align="center" class="table table-bordered table-striped table-hover tabelscroll">
-			    <tr>
+				<tr class="nw">
+                    <th>No</th>
+                    <th>Basis Aturan</th>
+                    <th>Aksi</th>
+                </tr>
+				<!-- <tr>
 			   
 			        <th><a class="sort" href="kelola_penyakit.php?urut=kd_penyakit & pola=<?php $polabaru;?>"><div>Id Aturan</div></a></th>
 			        <th><a class="sort" href="kelola_admin.php?urut=nama_penyakit & pola=<?php $polabaru;?>"><div>Aturan</div></a></th>
 			       
 			        <th width="100px">Aksi</th>
-			    </tr>			    
+			    </tr>			     -->
 			   
 			    <?php while($data=mysqli_fetch_assoc($hasil)){ ?>
 			    <tr>

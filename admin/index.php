@@ -4,6 +4,10 @@
     	header('location:aksi_login.php');
 	}
 ?>
+
+<?php
+include'../functions.php';
+?>
 <html>
 <head>
 	<title>ADMINISTRATOR</title>
@@ -59,7 +63,7 @@
         				src="penyakit.jpg"/><p class="mn">PENYAKIT</p></div></a>
 					</td>
 					<td width="250px" height="250px">
-						<a href="kelola aturan/kelola_aturan.php"><div class="menuadmin"><img class="img-thumbnail"
+						<a href="../?m=admin/kelola aturan/kelola_aturan"><div class="menuadmin"><img class="img-thumbnail"
         				src="aturan.jpg"/><p class="mn">ATURAN</p></div></a>
 					</td>
 				</tr>
