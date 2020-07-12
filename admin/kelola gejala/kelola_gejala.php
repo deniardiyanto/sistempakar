@@ -45,7 +45,7 @@
 	</div>
 	<div class="headerlog2">
 	<a href="../index.php"><div class="divlogo">
-	<img src="../../gambar/Logo-admin.jpg" class="logo img-thumbnail">	
+	<img class="img-thumbnail rounded-circle" src="../../gambar/Logo-admin.jpg" class="logo">	
 		</div></a>
 		<div class="divmenu">
 			<table>

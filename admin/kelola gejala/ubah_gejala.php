@@ -35,7 +35,7 @@
 	</div>
 	<div class="headerlog2">
 		<a href="../index.php"><div class="divlogo">
-			<img src="../../gambar/Logo-admin.jpg" class="logo img-thumbnail">
+		<img class="img-thumbnail rounded-circle" src="../../gambar/Logo-admin.jpg" class="logo">
 		</div></a>
 		<div class="divmenu">
 			<table>
@@ -86,15 +86,20 @@
 			</div>
 		</div>
 	</div>
-	<div class="footer1">
-		<p class="fot1">S I S T E M  P A K A R</p>
-		<p class="fot2"></i>DIAGNOSA PENYAKIT PADA ANJING</p>
-		<table class="fot2">
-			
+	<div class="footer">
+		<br><br><br>
+	<div class="konten2">
+		<table width="100%">
+			<tr>
+				<td width="80%" height="150px" align="center">
+					<h1>S I S T E M  P A K A R</h1>
+					<p>DIAGNOSA PENYAKIT PADA ANJING</p>
+				</td>
+				
+			</tr>
 		</table>
 	</div>
-	<div class="footer2">
-		<p class="textfooter2"></p>
+	</div>
 	</div>
 </body>
 </html>
