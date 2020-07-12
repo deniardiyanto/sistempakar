@@ -5,7 +5,7 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
-  $("#nama_pengguna").focus();
+  $("#nama_pgn").focus();
   })
 function validasi(form){
   if(form.nama_pgn.value==""){
