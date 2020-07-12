@@ -6,8 +6,8 @@
 
 	include '../koneksi.php';
 
-	$kd_penyakit  =$_GET['no'];
-	$query = "SELECT * FROM tb_penyakit WHERE kd_penyakit='".$kd_penyakit."'";
+	$kode_diagnosa  =$_GET['no'];
+	$query = "SELECT * FROM tb_diagnosa WHERE kode_diagnosa='".$kode_diagnosa."'";
 	$hasil = mysqli_query($koneksi,$query);		
 ?>
 <html>
@@ -35,7 +35,7 @@
 	</div>
 	<div class="headerlog2">
 		<a href="../index.php"><div class="divlogo">
-			<img src="../../gambar/Logo Inayatullah.png" class="logo">
+		<img class="img-thumbnail rounded-circle" src="../../gambar/Logo-admin.jpg" class="logo">
 		</div></a>
 		<div class="divmenu">
 			<table>
@@ -43,7 +43,8 @@
 					<td width="150px"><a href="../kelola admin/kelola_admin.php" class="menu2">ADMIN</a></td>
 					<td width="150px"><a href="" class="menu2">GEJALA</a></td>
 					<td width="150px"><a href="../kelola penyakit/kelola_penyakit.php" class="menu2">PENYAKIT</a></td>
-					<td width="150px"><a href="../kelola relasi/kelola_relasi.php" class="menu2">RELASI</a></td>
+					<!-- <td width="150px"><a href="../kelola relasi/kelola_relasi.php" class="menu2">RELASI</a></td> -->
+					<td width="150px"><a href="../kelola aturan/kelola_aturan.php" class="menu2">ATURAN</a></td>
 				</tr>
 			</table>
 		</div>
@@ -65,12 +66,12 @@
 					</tr>
 					<tr>
 						<td width="300px" height="30px">KODE PENYAKIT</td>
-						<td width="300px" height="30px"><input type="text" name="kd_penyakit" placeholder="kode penyakit" required="" readonly="" class="form-control" value="<?php echo $data['kd_penyakit'] ?>"></td>
+						<td width="300px" height="30px"><input type="text" name="kode_diagnosa" placeholder="kode penyakit" required="" readonly="" class="form-control" value="<?php echo $data['kode_diagnosa'] ?>"></td>
 					</tr>
 
 					<tr>
 						<td width="300px" height="30px">NAMA PENYAKIT</td>
-						<td width="300px" height="30px"><input type="text" name="nama_penyakit" placeholder="kode penyakit" required="" class="form-control" value="<?php echo $data['nama_penyakit'] ?>"></td>
+						<td width="300px" height="30px"><input type="text" name="nama_diagnosa" placeholder="kode penyakit" required="" class="form-control" value="<?php echo $data['nama_diagnosa'] ?>"></td>
 					</tr>
 					
 					
@@ -78,7 +79,7 @@
 						<td></td>
 						<td height="100px">
 							<button type="submit" class="btn btn-success btn-md">Simpan</button>
-							<a href="kelola_admin.php" class="btn btn-danger btn-md">Batal</a>
+							<a href="kelola_penyakit.php" class="btn btn-danger btn-md">Batal</a>
 						</td>
 					</tr>
 				</table>

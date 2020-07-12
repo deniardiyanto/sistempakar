@@ -43,7 +43,8 @@
 					<td width="150px"><a href="../kelola admin/kelola_admin.php" class="menu2">ADMIN</a></td>
 					<td width="150px"><a href="" class="menu2">GEJALA</a></td>
 					<td width="150px"><a href="../kelola penyakit/kelola_penyakit.php" class="menu2">PENYAKIT</a></td>
-					<td width="150px"><a href="../kelola relasi/kelola_relasi.php" class="menu2">RELASI</a></td>
+					<!-- <td width="150px"><a href="../kelola relasi/kelola_relasi.php" class="menu2">RELASI</a></td> -->
+					<td width="150px"><a href="../kelola aturan/kelola_aturan.php" class="menu2">ATURAN</a></td>
 				</tr>
 			</table>
 		</div>

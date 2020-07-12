@@ -45,7 +45,7 @@
 	</div>
 	<div class="headerlog2">
 		<a href="../index.php"><div class="divlogo">
-			
+		<img class="img-thumbnail rounded-circle" src="../../gambar/Logo-admin.jpg" class="logo">	
 		</div></a>
 		<div class="divmenu">
 			<table>
@@ -60,9 +60,9 @@
 	</div>
 	<div>
 		<div class="konten">
-			<p class="hal">INPUT > DATA PENYAKIT</p>
+			<p class="hal">INPUT > DATA DIAGNOSA PENYAKIT</p>
 			<hr>
-			<p class="judulkonten"><b>DATA PENYAKIT</b></p>
+			<p class="judulkonten"><b>DATA DIAGNOSA PENYAKIT</b></p>
 			<div class="garispendek gold"></div>
 			<br>
 			<table>
@@ -90,7 +90,7 @@
 			
 			include '../koneksi.php';
 
-			$query = "SELECT max(kd_penyakit) as kode FROM tb_penyakit";
+			$query = "SELECT max(kode_diagnosa) as kode FROM tb_diagnosa";
 			$hasil = mysqli_query($koneksi,$query);
 			$data = mysqli_fetch_array($hasil);
 			$kodeadmn = $data['kode'];
@@ -110,11 +110,11 @@
 				<table class="text">
 					<tr>
 						<td width="300px" height="30px">KODE PENYAKIT</td>
-						<td width="300px" height="30px"><input type="text" name="kd_penyakit" id="kd_penyakit" value="<?php echo $kodeadmn; ?>" required="" class="form-control"></td>
+						<td width="300px" height="30px"><input type="text" name="kode_diagnosa" id="kode_diagnosa" value="<?php echo $kodeadmn; ?>" required="" class="form-control"></td>
 					</tr>
 					<tr>
 						<td width="300px" height="30px">NAMA PENYAKIT</td>
-						<td width="300px" height="30px"><input type="text" name="nama_penyakit" placeholder="nama penyakit" required="" class="form-control"></td>
+						<td width="300px" height="30px"><input type="text" name="nama_diagnosa" placeholder="nama penyakit" required="" class="form-control"></td>
 					</tr>
 					
 					<tr>
@@ -130,7 +130,7 @@
 			<?php 
 			include '../koneksi.php';			
 
-			$query = "SELECT * FROM tb_penyakit";
+			$query = "SELECT * FROM tb_diagnosa";
 
 			$pola = 'ASC';
 			$polabaru = 'ASC';
@@ -138,9 +138,9 @@
 				$cari = $_GET['cari'];
 				$cari2 = $_GET['cari2'];
 				if ($cari2=='') {
-					$query2 = "SELECT * FROM tb_penyakit WHERE nama_penyakit LIKE '%".$cari."%'";
+					$query2 = "SELECT * FROM tb_diagnosa WHERE nama_diagnosa LIKE '%".$cari."%'";
 				}else{
-					$query2 = "SELECT * FROM tb_penyakit WHERE nama_penyakit LIKE '%".$cari."%' AND nama_penyakit='".$cari2."'";
+					$query2 = "SELECT * FROM tb_diagnosa WHERE nama_diagnosa LIKE '%".$cari."%' AND nama_diagnosa='".$cari2."'";
 				}
 				$hasil = mysqli_query($koneksi,$query2);
 				?>
@@ -151,7 +151,7 @@
 				$urut = $_GET['urut'];
 				$pola = $_GET['pola'];
 				 
-				$query3 = "SELECT * FROM tb_penyakit ORDER BY ".$urut."".$pola."";
+				$query3 = "SELECT * FROM tb_diagnosa ORDER BY ".$urut."".$pola."";
 				$hasil = mysqli_query($koneksi,$query3);
 				if($pola=='ASC'){
 					$polabaru='DESC';
@@ -169,8 +169,8 @@
 			<table align="center" class="table table-bordered table-striped table-hover tabelscroll">
 			    <tr>
 			   
-			        <th><a class="sort" href="kelola_penyakit.php?urut=kd_penyakit & pola=<?php $polabaru;?>"><div>Kode Penyakit</div></a></th>
-			        <th><a class="sort" href="kelola_penyakit.php?urut=nama_penyakit & pola=<?php $polabaru;?>"><div>Nama Penyakit</div></a></th>
+			        <th><a class="sort" href="kelola_penyakit.php?urut=kode_diagnosa & pola=<?php $polabaru;?>"><div>Kode Penyakit</div></a></th>
+			        <th><a class="sort" href="kelola_penyakit.php?urut=nama_diagnosa & pola=<?php $polabaru;?>"><div>Nama Penyakit</div></a></th>
 			       
 			        <th width="100px">Aksi</th>
 			    </tr>			    
@@ -178,18 +178,18 @@
 			    <?php while($data=mysqli_fetch_assoc($hasil)){ ?>
 			    <tr>
 			        <td>
-			            <?php echo $data['kd_penyakit'] ?>
+			            <?php echo $data['kode_diagnosa'] ?>
 			        </td>
 			        <td>
-			            <?php echo $data['nama_penyakit'] ?>
+			            <?php echo $data['nama_diagnosa'] ?>
 			        </td>
 			        
 			        
 
 			        <td>
-			            <a class="fa fa-pencil" title="Ubah Data" style="font-size:18px;" href="ubah_penyakit.php?no=<?php echo $data['kd_penyakit']?>"></a>
+			            <a class="fa fa-pencil" title="Ubah Data" style="font-size:18px;" href="ubah_penyakit.php?no=<?php echo $data['kode_diagnosa']?>"></a>
 			            &ensp;
-			            <a class="fa fa-trash" title="Hapus" style="font-size:18px;" onclick="return(confirm('Hapus Data?'))" href="aksi_hapus_penyakit.php?no=<?php echo $data['kd_penyakit']?>"></a>
+			            <a class="fa fa-trash" title="Hapus" style="font-size:18px;" onclick="return(confirm('Hapus Data?'))" href="aksi_hapus_penyakit.php?no=<?php echo $data['kode_diagnosa']?>"></a>
 			        </td>
 			    </tr>
 
