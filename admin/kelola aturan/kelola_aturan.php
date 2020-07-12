@@ -45,7 +45,7 @@
 	</div>
 	<div class="headerlog2">
 		<a href="../index.php"><div class="divlogo">
-			
+		<img class="img-thumbnail rounded-circle" src="../../gambar/Logo-admin.jpg" class="logo">
 		</div></a>
 		<div class="divmenu">
 			<table>
@@ -117,9 +117,9 @@
                             	<option></option>
                             	<?php
                             	include '../koneksi.php';
-                            	$jika = mysqli_query($koneksi,"SELECT * FROM tb_penyakit");
+                            	$jika = mysqli_query($koneksi,"SELECT * FROM tb_diagnosa");
                             	while ($datajika=mysqli_fetch_array($jika)) {
-                            		echo'<option value="'.$datajika['nama_penyakit'].'">'.$datajika['nama_penyakit'].'</option>';
+                            		echo'<option value="'.$datajika['nama_diagnosa'].'">'.$datajika['nama_diagnosa'].'</option>';
                             	}
                             	?>
                         	</select><br>	
@@ -150,9 +150,9 @@
                             	<option></option>
                             	<?php
                             	include '../koneksi.php';
-                            	$jika = mysqli_query($koneksi,"SELECT * FROM tb_penyakit");
+                            	$jika = mysqli_query($koneksi,"SELECT * FROM tb_diagnosa");
                             	while ($datajika=mysqli_fetch_array($jika)) {
-                            		echo'<option value="'.$datajika['nama_penyakit'].'">'.$datajika['nama_penyakit'].'</option>';
+                            		echo'<option value="'.$datajika['nama_diagnosa'].'">'.$datajika['nama_diagnosa'].'</option>';
                             	}
                             	?>
                         	</select><br>
@@ -180,9 +180,9 @@
 				$cari = $_GET['cari'];
 				$cari2 = $_GET['cari2'];
 				if ($cari2=='') {
-					$query2 = "SELECT * FROM tb_penyakit WHERE nama_penyakit LIKE '%".$cari."%'";
+					$query2 = "SELECT * FROM tb_diagnosa WHERE nama_diagnosa LIKE '%".$cari."%'";
 				}else{
-					$query2 = "SELECT * FROM tb_penyakit WHERE nama_penyakit LIKE '%".$cari."%' AND nama_penyakit='".$cari2."'";
+					$query2 = "SELECT * FROM tb_diagnosa WHERE nama_diagnosa LIKE '%".$cari."%' AND nama_diagnosa='".$cari2."'";
 				}
 				$hasil = mysqli_query($koneksi,$query2);
 				?>
@@ -193,7 +193,7 @@
 				$urut = $_GET['urut'];
 				$pola = $_GET['pola'];
 				 
-				$query3 = "SELECT * FROM tb_penyakit ORDER BY ".$urut."".$pola."";
+				$query3 = "SELECT * FROM tb_diagnosa ORDER BY ".$urut."".$pola."";
 				$hasil = mysqli_query($koneksi,$query3);
 				if($pola=='ASC'){
 					$polabaru='DESC';
@@ -216,27 +216,27 @@
                 </tr>
 				<!-- <tr>
 			   
-			        <th><a class="sort" href="kelola_penyakit.php?urut=kd_penyakit & pola=<?php $polabaru;?>"><div>Id Aturan</div></a></th>
-			        <th><a class="sort" href="kelola_admin.php?urut=nama_penyakit & pola=<?php $polabaru;?>"><div>Aturan</div></a></th>
+			        <th><a class="sort" href="kelola_penyakit.php?urut=kode_diagnosa & pola=<?php $polabaru;?>"><div>Id Aturan</div></a></th>
+			        <th><a class="sort" href="kelola_admin.php?urut=nama_diagnosa & pola=<?php $polabaru;?>"><div>Aturan</div></a></th>
 			       
 			        <th width="100px">Aksi</th>
-			    </tr>			     -->
+			    </tr> -->
 			   
 			    <?php while($data=mysqli_fetch_assoc($hasil)){ ?>
 			    <tr>
 			        <td>
-			            <?php echo $data['kd_penyakit'] ?>
+			            <?php echo $data['kode_diagnosa'] ?>
 			        </td>
 			        <td>
-			            <?php echo $data['nama_penyakit'] ?>
+			            <?php echo $data['nama_diagnosa'] ?>
 			        </td>
 			        
 			        
 
 			        <td>
-			            <a class="fa fa-pencil" title="Ubah Data" style="font-size:18px;" href="aksi_ubah_penyakit.php?no=<?php echo $data['kd_penyakit']?>"></a>
+			            <a class="fa fa-pencil" title="Ubah Data" style="font-size:18px;" href="aksi_ubah_penyakit.php?no=<?php echo $data['kode_diagnosa']?>"></a>
 			            &ensp;
-			            <a class="fa fa-trash" title="Hapus" style="font-size:18px;" onclick="return(confirm('Hapus Data?'))" href="aksi_hapus_penyakit.php?no=<?php echo $data['kd_penyakit']?>"></a>
+			            <a class="fa fa-trash" title="Hapus" style="font-size:18px;" onclick="return(confirm('Hapus Data?'))" href="aksi_hapus_penyakit.php?no=<?php echo $data['kode_diagnosa']?>"></a>
 			        </td>
 			    </tr>
 
