@@ -7,7 +7,7 @@
 	include '../koneksi.php';
 
 	$kd_gejala  =$_GET['no'];
-	$query = "SELECT * FROM tb_gejala WHERE kd_gejala='".$kd_gejala."'";
+	$query = "SELECT * FROM tb_gejala WHERE kode_gejala='".$kd_gejala."'";
 	$hasil = mysqli_query($koneksi,$query);		
 ?>
 <html>
@@ -35,7 +35,7 @@
 	</div>
 	<div class="headerlog2">
 		<a href="../index.php"><div class="divlogo">
-			<img src="../../gambar/Logo Inayatullah.png" class="logo">
+			<img src="../../gambar/Logo-admin.jpg" class="logo img-thumbnail">
 		</div></a>
 		<div class="divmenu">
 			<table>
@@ -66,7 +66,7 @@
 
 						<tr>
 						<td width="300px" height="30px">KODE GEJALA</td>
-						<td width="300px" height="30px"><input type="text" name="kd_gejala" placeholder="kode gejala" required="" class="form-control" value="<?php echo $data['kd_gejala'] ?>"></td>
+						<td width="300px" height="30px"><input type="text" name="kode_gejala" placeholder="kode gejala" required="" class="form-control" value="<?php echo $data['kode_gejala'] ?>"></td>
 					</tr>
 					<tr>
 						<td width="300px" height="30px">NAMA GEJALA</td>

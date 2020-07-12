@@ -44,8 +44,8 @@
 		</table>
 	</div>
 	<div class="headerlog2">
-		<a href="../index.php"><div class="divlogo">
-			
+	<a href="../index.php"><div class="divlogo">
+	<img src="../../gambar/Logo-admin.jpg" class="logo img-thumbnail">	
 		</div></a>
 		<div class="divmenu">
 			<table>
@@ -91,7 +91,7 @@
 			
 			include '../koneksi.php';
 
-			$query = "SELECT max(kd_gejala) as kode FROM tb_gejala";
+			$query = "SELECT max(kode_gejala) as kode FROM tb_gejala";
 			$hasil = mysqli_query($koneksi,$query);
 			$data = mysqli_fetch_array($hasil);
 			$kodeadmn = $data['kode'];
@@ -112,7 +112,7 @@
 				<table class="text">
 					<tr>
 						<td width="300px" height="30px">KODE GEJALA</td>
-						<td width="300px" height="30px"><input type="text" name="kd_gejala" id="kd_gejala" value="<?php echo $kodeadmn; ?>" required="" class="form-control"></td>
+						<td width="300px" height="30px"><input type="text" name="kode_gejala" id="kode_gejala" value="<?php echo $kodeadmn; ?>" required="" class="form-control"></td>
 					</tr>
 					<tr>
 						<td width="300px" height="30px">NAMA GEJALA</td>
@@ -180,7 +180,7 @@
 			    <?php while($data=mysqli_fetch_assoc($hasil)){ ?>
 			    <tr>
 			        <td>
-			            <?php echo $data['kd_gejala'] ?>
+			            <?php echo $data['kode_gejala'] ?>
 			        </td>
 			        <td>
 			            <?php echo $data['nama_gejala'] ?>
@@ -190,9 +190,9 @@
 			        
 
 			        <td>
-			            <a class="fa fa-pencil" title="Ubah Gejala" style="font-size:18px;" href="ubah_gejala.php?no=<?php echo $data['kd_gejala']?>"></a>
+			            <a class="fa fa-pencil" title="Ubah Gejala" style="font-size:18px;" href="ubah_gejala.php?no=<?php echo $data['kode_gejala']?>"></a>
 			            &ensp;
-			            <a class="fa fa-trash" title="Hapus" style="font-size:18px;" onclick="return(confirm('Hapus Data?'))" href="aksi_hapus_gejala.php?no=<?php echo $data['kd_gejala']?>"></a>
+			            <a class="fa fa-trash" title="Hapus" style="font-size:18px;" onclick="return(confirm('Hapus Data?'))" href="aksi_hapus_gejala.php?no=<?php echo $data['kode_gejala']?>"></a>
 			        </td>
 			    </tr>
 
