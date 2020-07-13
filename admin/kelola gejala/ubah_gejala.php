@@ -6,8 +6,8 @@
 
 	include '../koneksi.php';
 
-	$kd_gejala  =$_GET['no'];
-	$query = "SELECT * FROM tb_gejala WHERE kode_gejala='".$kd_gejala."'";
+	$kode_gejala  =$_GET['no'];
+	$query = "SELECT * FROM tb_gejala WHERE kode_gejala='".$kode_gejala."'";
 	$hasil = mysqli_query($koneksi,$query);		
 ?>
 <html>

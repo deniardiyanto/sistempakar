@@ -1,13 +1,13 @@
 <?php 
 include '../koneksi.php';
 
-$kd_gejala =$_POST['kd_gejala'];
+$kode_gejala =$_POST['kode_gejala'];
 $nama_gejala =$_POST['nama_gejala'];
 
 
 
 
-$query=("UPDATE tb_gejala SET nama_gejala='$nama_gejala' WHERE kd_gejala='$kd_gejala'");
+$query=("UPDATE tb_gejala SET nama_gejala='$nama_gejala' WHERE kode_gejala='$kode_gejala'");
 
 
 $insert=mysqli_query($koneksi,$query);

@@ -102,7 +102,7 @@
 			$noUrut++;
 
 			$char = "G";
-			$kodeadmn = $char . sprintf("%01s", $noUrut);
+			$kodeadmn = $char . sprintf("%001s", $noUrut);
 			
 			?>
 
@@ -112,11 +112,11 @@
 				<table class="text">
 					<tr>
 						<td width="300px" height="30px">KODE GEJALA</td>
-						<td width="300px" height="30px"><input type="text" name="kode_gejala" id="kode_gejala" value="<?php echo $kodeadmn; ?>" required="" class="form-control"></td>
+						<td width="300px" height="30px"><input type="text" name="kode_gejala" id="kode_gejala" placeholder="Kode gejala" required="" class="form-control"></td>
 					</tr>
 					<tr>
 						<td width="300px" height="30px">NAMA GEJALA</td>
-						<td width="300px" height="30px"><input type="text" name="nama_gejala" placeholder="nama gejala" required="" class="form-control"></td>
+						<td width="300px" height="30px"><input type="text" name="nama_gejala" id="nama_gejala" placeholder="Nama gejala" required="" class="form-control"></td>
 					</tr>
 					
 					<tr>

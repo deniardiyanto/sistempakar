@@ -1,14 +1,14 @@
 <?php 
 include '../koneksi.php';
 
-$kd_gejala =$_POST['kd_gejala'];
+$kode_gejala =$_POST['kode_gejala'];
 $nama_gejala =$_POST['nama_gejala'];
 
 
 
 
 
-$query="INSERT INTO tb_gejala(kd_gejala,nama_gejala) VALUES ('".$kd_gejala."','".$nama_gejala."')";
+$query="INSERT INTO tb_gejala(kode_gejala,nama_gejala) VALUES ('".$kode_gejala."','".$nama_gejala."')";
 
 
 $insert=mysqli_query($koneksi,$query);

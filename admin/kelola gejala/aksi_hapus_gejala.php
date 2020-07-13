@@ -1,14 +1,20 @@
 <?php 
 include '../koneksi.php';
 
-$kd_gejala  =$_GET['no'];
+$kode_gejala  =$_GET['no'];
 
-$query="DELETE FROM tb_gejala WHERE kd_gejala='".$kd_gejala."'";
+$query="DELETE FROM tb_gejala WHERE kode_gejala='".$kode_gejala."'";
 
 $delete=mysqli_query($koneksi,$query);
 if($delete){
-    header('location:kelola_gejala.php');
+    // header('location:kelola_gejala.php');
+    ?>
+    <script type="text/javascript">
+			alert("Data Berhasil dihapus!");
+			window.location='kelola_gejala.php';
+	</script>
+    <?php
 }else{
-    echo "Data Gagal Dihapus";    
+    echo "Data Gagal Dihapus!";    
 }
 ?>
