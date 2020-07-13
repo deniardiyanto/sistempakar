@@ -3,6 +3,7 @@
 	if (!isset($_SESSION['username'])) {
     	header('location:../login.php');
 	}
+	include'../../functions.php';
 ?>
 <html>
 <head>
@@ -222,13 +223,13 @@
 			        <th width="100px">Aksi</th>
 			    </tr> -->
 			   
-			    <?php while($data=mysqli_fetch_assoc($hasil)){ ?>
-			    <tr>
+			    <?php //while($data=mysqli_fetch_assoc($hasil)){ ?>
+			    <!-- <tr>
 			        <td>
-			            <?php echo $data['kode_diagnosa'] ?>
+			            <?php //echo $data['kode_diagnosa'] ?>
 			        </td>
 			        <td>
-			            <?php echo $data['nama_diagnosa'] ?>
+			            <?php //echo $data['nama_diagnosa'] ?>
 			        </td>
 			        
 			        
@@ -240,7 +241,49 @@
 			        </td>
 			    </tr>
 
-			    <?php } ?>
+			    <?php //} ?> -->
+
+				<!-- pengetahuan ambil dari sp_kucingpersia -->
+				<?php
+            $rows = $db->get_results("SELECT * FROM tb_gejala ORDER BY kode_gejala");
+            foreach($rows as $row) {
+                $GEJALA[$row->kode_gejala] = $row->nama_gejala; 
+            }
+            
+            $rows = $db->get_results("SELECT * FROM tb_diagnosa ORDER BY kode_diagnosa");
+            foreach($rows as $row) {
+                $DIAGNOSA[$row->kode_diagnosa] = $row->nama_diagnosa; 
+            }
+            
+            $q = esc_field($_GET['q']);
+            $rows = $db->get_results("SELECT * FROM tb_pengetahuan");
+            $no=0;
+            
+            foreach($rows as $row):?>
+            <tr>
+                <td><?=++$no ?></td>
+                <td>
+                    <strong>JIKA</strong> <?=$GEJALA[$row->jika]?><br />
+                    <?php if($row->ya_tanya):?>
+                        <strong>MAKA </strong> Tanya : Apakah <?=strtolower($GEJALA[$row->ya_tanya])?>?<br />
+                    <?php endif;?>
+                    <?php if($row->ya_diagnosa):?>
+                        <strong>MAKA </strong> Diagnosa : <?=$DIAGNOSA[$row->ya_diagnosa]?>?<br />
+                    <?php endif;?>
+                    <?php if($row->tidak_tanya):?>
+                        <strong>JIKA TIDAK MAKA </strong> Tanya : Apakah <?=strtolower($GEJALA[$row->tidak_tanya])?>?<br />
+                    <?php endif;?>
+                    <?php if($row->tidak_diagnosa):?>
+                        <strong>JIKA TIDAK MAKA </strong> Diagnosa :  <?=$DIAGNOSA[$row->tidak_diagnosa]?>?<br />
+                    <?php endif;?>
+                </td>
+                <td class="nw">
+                    <a class="btn btn-xs btn-warning" href="?m=pengetahuan_ubah&ID=<?=$row->ID?>"><span class="glyphicon glyphicon-edit"></span></a>
+                    <a class="btn btn-xs btn-danger" href="aksi.php?act=pengetahuan_hapus&ID=<?=$row->ID?>" onclick="return confirm('Hapus data?')"><span class="glyphicon glyphicon-trash"></span></a>
+                </td>
+            </tr>
+            <?php endforeach;?>
+				<!-- end copy -->
 			</table>
 			<hr>
 		</div>
