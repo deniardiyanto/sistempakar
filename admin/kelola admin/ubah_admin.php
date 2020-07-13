@@ -65,7 +65,7 @@
 				<table class="text">
 					<tr>
 						<td width="300px" height="30px">ID ADMIN</td>
-						<td width="300px" height="30px"><input type="number" name="id_admin" id="id_admin" placeholder="Id Admin" required="" readonly="" class="form-control" value="<?php echo $data['id_admin'] ?>"></td>
+						<td width="300px" height="30px"><input type="text" name="id_admin" id="id_admin" placeholder="Id Admin" required="" class="form-control" value="<?php echo $data['id_admin'] ?>"></td>
 					</tr>
 					<tr>
 						<td width="300px" height="30px">USERNAME</td>
