@@ -1,14 +1,14 @@
 <?php 
 include '../koneksi.php';
 
-$kd_penyakit =$_POST['kd_penyakit'];
-$nama_penyakit =$_POST['nama_penyakit'];
+$kode_diagnosa =$_POST['kode_diagnosa'];
+$nama_diagnosa =$_POST['nama_diagnosa'];
 
 
 
 
 
-$query="INSERT INTO tb_penyakit(kd_penyakit,nama_penyakit) VALUES ('".$kd_penyakit."','".$nama_penyakit."')";
+$query="INSERT INTO tb_diagnosa(kode_diagnosa,nama_diagnosa) VALUES ('".$kode_diagnosa."','".$nama_diagnosa."')";
 
 
 $insert=mysqli_query($koneksi,$query);

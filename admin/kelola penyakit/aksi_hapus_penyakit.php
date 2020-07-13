@@ -1,14 +1,24 @@
 <?php 
 include '../koneksi.php';
 
-$kd_penyakit =$_GET['no'];
+$kode_diagnosa =$_GET['no'];
 
-$query="DELETE FROM tb_penyakit WHERE kd_penyakit='".$kd_penyakit."'";
+$query="DELETE FROM tb_diagnosa WHERE kode_diagnosa='".$kode_diagnosa."'";
 
 $delete=mysqli_query($koneksi,$query);
 if($delete){
-    header('location:kelola_penyakit.php');
+    ?>
+		<script type="text/javascript">
+			alert("Data Berhasil dihapus");
+			window.location='kelola_penyakit.php';
+		</script>
+	<?php
 }else{
-    echo "Data Gagal Dihapus";    
+    ?>
+		<script type="text/javascript">
+			alert("Data Gagal Dihapus");
+			window.location='kelola_penyakit.php';
+		</script>
+	<?php    
 }
 ?>

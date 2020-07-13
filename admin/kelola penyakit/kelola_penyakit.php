@@ -110,11 +110,11 @@
 				<table class="text">
 					<tr>
 						<td width="300px" height="30px">KODE PENYAKIT</td>
-						<td width="300px" height="30px"><input type="text" name="kode_diagnosa" id="kode_diagnosa" value="<?php echo $kodeadmn; ?>" required="" class="form-control"></td>
+						<td width="300px" height="30px"><input type="text" name="kode_diagnosa" id="kode_diagnosa" value="<?php //echo $kodeadmn; ?>" required="" class="form-control" placeholder="Kode penyakit"></td>
 					</tr>
 					<tr>
 						<td width="300px" height="30px">NAMA PENYAKIT</td>
-						<td width="300px" height="30px"><input type="text" name="nama_diagnosa" placeholder="nama penyakit" required="" class="form-control"></td>
+						<td width="300px" height="30px"><input type="text" name="nama_diagnosa" placeholder="Nama penyakit" required="" class="form-control"></td>
 					</tr>
 					
 					<tr>
