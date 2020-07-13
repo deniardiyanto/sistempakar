@@ -69,7 +69,18 @@
 			<table>
 				<tr>
 					<td>
-						
+					<form action="kelola_aturan.php" method="get">
+							<table>
+								<tr>
+									<td width="10px"></td>
+									<td>
+										<input type="text" name="cari" placeholder="Cari Basis Aturan" class="form-control">
+									</td>
+									<td width="70px" align="center"><button type="submit" class="btn btn-success btn-md">Cari</button></td>
+									<td><a class="btn btn-primary btn-md" href="kelola_aturan.php">Refresh</a></td>
+								</tr>
+							</table>	
+						</form>	
 					</td>
 					<td width="110px" align="right"><form><a class="btn btn-primary btn-md" onclick="myFunction()">Data Baru +</a></form></td>
 				</tr>
