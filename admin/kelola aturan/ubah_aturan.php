@@ -88,7 +88,7 @@
 						<td></td>
 						<td height="100px">
 							<button type="submit" class="btn btn-success btn-md">Simpan</button>
-							<a href="kelola_admin.php" class="btn btn-danger btn-md">Batal</a>
+							<a href="kelola_aturan.php" class="btn btn-danger btn-md">Batal</a>
 						</td>
 					</tr>
 				</table>
