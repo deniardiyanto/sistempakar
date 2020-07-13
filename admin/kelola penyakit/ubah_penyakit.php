@@ -41,8 +41,8 @@
 			<table>
 				<tr align="center">
 					<td width="150px"><a href="../kelola admin/kelola_admin.php" class="menu2">ADMIN</a></td>
-					<td width="150px"><a href="" class="menu2">GEJALA</a></td>
-					<td width="150px"><a href="../kelola penyakit/kelola_penyakit.php" class="menu2">PENYAKIT</a></td>
+					<td width="150px"><a href="../kelola gejala/kelola_gejala.php" class="menu2">GEJALA</a></td>
+					<td width="150px"><a href="" class="menu2">PENYAKIT</a></td>
 					<!-- <td width="150px"><a href="../kelola relasi/kelola_relasi.php" class="menu2">RELASI</a></td> -->
 					<td width="150px"><a href="../kelola aturan/kelola_aturan.php" class="menu2">ATURAN</a></td>
 				</tr>
@@ -88,15 +88,20 @@
 			</div>
 		</div>
 	</div>
-	<div class="footer1">
-		<p class="fot1">S I S T E M  P A K A R</p>
-		<p class="fot2"></i>DIAGNOSA PENYAKIT PADA ANJING</p>
-		<table class="fot2">
-			
+	<div class="footer">
+		<br><br><br>
+	<div class="konten2">
+		<table width="100%">
+			<tr>
+				<td width="80%" height="150px" align="center">
+					<h1>S I S T E M  P A K A R</h1>
+					<p>DIAGNOSA PENYAKIT PADA ANJING</p>
+				</td>
+				
+			</tr>
 		</table>
 	</div>
-	<div class="footer2">
-		<p class="textfooter2"></p>
+	</div>
 	</div>
 </body>
 </html>

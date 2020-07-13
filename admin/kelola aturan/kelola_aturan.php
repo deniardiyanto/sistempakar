@@ -288,10 +288,15 @@
                         <strong>JIKA TIDAK MAKA </strong> Diagnosa :  <?=$DIAGNOSA[$row->tidak_diagnosa]?>?<br />
                     <?php endif;?>
                 </td>
-                <td class="nw">
-                    <a class="btn btn-xs btn-warning" href="?m=pengetahuan_ubah&ID=<?=$row->ID?>"><span class="glyphicon glyphicon-edit"></span></a>
-                    <a class="btn btn-xs btn-danger" href="aksi.php?act=pengetahuan_hapus&ID=<?=$row->ID?>" onclick="return confirm('Hapus data?')"><span class="glyphicon glyphicon-trash"></span></a>
-                </td>
+                <!-- <td class="nw">
+                    <a class="fa fa-pencil" title="Ubah Data" style="font-size:18px;" href="?m=ubah_aturan&ID=<?=$row->ID?>"></a>&ensp;
+                    <a class="fa fa-trash" title="Hapus" style="font-size:18px;" href="aksi.php?act=pengetahuan_hapus&ID=<?=$row->ID?>" onclick="return confirm('Hapus data?')"></span></a>
+                </td> -->
+				<td>
+					<a class="fa fa-pencil" title="Ubah Data" style="font-size:18px;" href="ubah_aturan.php?no=<?php echo $data['kode_diagnosa']?>"></a>
+					&ensp;
+					<a class="fa fa-trash" title="Hapus" style="font-size:18px;" onclick="return(confirm('Hapus Data?'))" href="aksi_hapus_penyakit.php?no=<?php echo $data['kode_diagnosa']?>"></a>
+			    </td>
             </tr>
             <?php endforeach;?>
 				<!-- end copy -->
