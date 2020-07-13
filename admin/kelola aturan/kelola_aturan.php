@@ -84,7 +84,28 @@
 					</td>
 					<td width="110px" align="right"><form><a class="btn btn-primary btn-md" onclick="myFunction()">Data Baru +</a></form></td>
 				</tr>
-			</table>	
+			</table>
+
+			<!-- dari kelola_penyakit -->
+			<?php
+			
+			include '../koneksi.php';
+
+			$query = "SELECT max(ID) as kode FROM tb_pengetahuan";
+			$hasil = mysqli_query($koneksi,$query);
+			$data = mysqli_fetch_array($hasil);
+			$kodeadmn = $data['kode'];
+
+
+			$noUrut = (int) substr($kodeadmn, 1, 1);
+
+			$noUrut++;
+
+			$char = "P";
+			$kodeadmn = $char . sprintf("%01s", $noUrut);
+			
+			?>
+			<!-- end dari -->
 
 			<div id="tambah">
 			<form action="aksi_tambah_aturan.php" method="post"> 
@@ -246,9 +267,9 @@
 			        
 
 			        <td>
-			            <a class="fa fa-pencil" title="Ubah Data" style="font-size:18px;" href="aksi_ubah_penyakit.php?no=<?php echo $data['kode_diagnosa']?>"></a>
+			            <a class="fa fa-pencil" title="Ubah Data" style="font-size:18px;" href="aksi_ubah_penyakit.php?no=<?php //echo $data['kode_diagnosa']?>"></a>
 			            &ensp;
-			            <a class="fa fa-trash" title="Hapus" style="font-size:18px;" onclick="return(confirm('Hapus Data?'))" href="aksi_hapus_penyakit.php?no=<?php echo $data['kode_diagnosa']?>"></a>
+			            <a class="fa fa-trash" title="Hapus" style="font-size:18px;" onclick="return(confirm('Hapus Data?'))" href="aksi_hapus_penyakit.php?no=<?php //echo $data['kode_diagnosa']?>"></a>
 			        </td>
 			    </tr>
 
@@ -293,9 +314,9 @@
                     <a class="fa fa-trash" title="Hapus" style="font-size:18px;" href="aksi.php?act=pengetahuan_hapus&ID=<?=$row->ID?>" onclick="return confirm('Hapus data?')"></span></a>
                 </td> -->
 				<td>
-					<a class="fa fa-pencil" title="Ubah Data" style="font-size:18px;" href="ubah_aturan.php?no=<?php echo $data['kode_diagnosa']?>"></a>
+					<a class="fa fa-pencil" title="Ubah Data" style="font-size:18px;" href="ubah_aturan.php?no=<?php echo $row->ID?>"></a>
 					&ensp;
-					<a class="fa fa-trash" title="Hapus" style="font-size:18px;" onclick="return(confirm('Hapus Data?'))" href="aksi_hapus_penyakit.php?no=<?php echo $data['kode_diagnosa']?>"></a>
+					<a class="fa fa-trash" title="Hapus" style="font-size:18px;" onclick="return(confirm('Hapus Data?'))" href="aksi_hapus_penyakit.php?no=<?php echo $row->ID?>"></a>
 			    </td>
             </tr>
             <?php endforeach;?>
