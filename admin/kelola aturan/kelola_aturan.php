@@ -71,14 +71,14 @@
 					<td>
 					<form action="kelola_aturan.php" method="get">
 							<table>
-								<tr>
+								<!-- <tr>
 									<td width="10px"></td>
 									<td>
 										<input type="text" name="cari" placeholder="Cari Basis Aturan" class="form-control">
 									</td>
 									<td width="70px" align="center"><button type="submit" class="btn btn-success btn-md">Cari</button></td>
 									<td><a class="btn btn-primary btn-md" href="kelola_aturan.php">Refresh</a></td>
-								</tr>
+								</tr> -->
 							</table>	
 						</form>	
 					</td>
@@ -219,7 +219,7 @@
 				}
 				$hasil = mysqli_query($koneksi,$query2);
 				?>
-					<h7>Pencarian untuk nama '<?php echo $cari; ?>',</h7>
+					<!-- <h7>Pencarian untuk nama '<?php echo $cari; ?>',</h7> -->
 				<?php				
 			}
 			else if(isset($_GET['urut'])) {
