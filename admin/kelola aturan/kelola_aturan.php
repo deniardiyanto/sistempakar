@@ -111,17 +111,15 @@
 			<form action="aksi_tambah_aturan.php" method="post"> 
 				<table class="text">
 					<tr>
+						<!-- <tr>
+							<td width="300px" height="30px">ID</td>
+							<td width="300px" height="30px"><input type="text" name="ID" id="ID" required="" class="form-control"><br></td>
+						</tr> -->
 						<td width="300px" height="30px">JIKA</td>
 						<td width="300px" height="30px">
-							<select class="form-control" name="ya_tanya">
-                            	<option></option>
-                            	<?php
-                            	include '../koneksi.php';
-                            	$jika = mysqli_query($koneksi,"SELECT * FROM tb_gejala");
-                            	while ($datajika=mysqli_fetch_array($jika)) {
-                            		echo'<option value="'.$datajika['nama_gejala'].'">'.$datajika['nama_gejala'].'</option>';
-                            	}
-                            	?>
+							<select class="form-control" name="jika" id="jika">
+							<option value=""></option>
+                    			<?=get_gejala_option($_POST[jika])?>
                         	</select><br>
 						</td>
 					</tr>
@@ -131,30 +129,18 @@
 						<td width="300px" height="30px">YA MAKA TANYA</td>
 						<td width="300px" height="30px">
 							
-								<select class="form-control" name="ya_tanya">
-                            	<option></option>
-                            	<?php
-                            	include '../koneksi.php';
-                            	$jika = mysqli_query($koneksi,"SELECT * FROM tb_gejala");
-                            	while ($datajika=mysqli_fetch_array($jika)) {
-                            		echo'<option value="'.$datajika['nama_gejala'].'">'.$datajika['nama_gejala'].'</option>';
-                            	}
-                            	?>
+								<select class="form-control" name="ya_tanya" id="ya_tanya">
+                            	<option value=""></option>
+                            		<?=get_gejala_option($_POST[ya_tanya], true)?>
                         	</select><br>
 						</td>
 					</tr>
 					<tr>
 						<td width="300px" height="30px">YA MAKA PENYAKIT</td>
 						<td width="300px" height="30px">
-						<select class="form-control" name="ya_tanya">
-                            	<option></option>
-                            	<?php
-                            	include '../koneksi.php';
-                            	$jika = mysqli_query($koneksi,"SELECT * FROM tb_diagnosa");
-                            	while ($datajika=mysqli_fetch_array($jika)) {
-                            		echo'<option value="'.$datajika['nama_diagnosa'].'">'.$datajika['nama_diagnosa'].'</option>';
-                            	}
-                            	?>
+						<select class="form-control" name="ya_diagnosa" id="ya_diagnosa">
+						<option value=""></option>
+                            	<?=get_diagnosa_option($_POST[ya_diagnosa])?>
                         	</select><br>	
 
 						</td>
@@ -162,16 +148,10 @@
 					<tr>
 						<td width="300px" height="30px">TIDAK MAKA TANYA</td>
 						<td width="300px" height="30px">
-						<select class="form-control" name="ya_tanya">
-                            	<option></option>
-                            	<?php
-                            	include '../koneksi.php';
-                            	$jika = mysqli_query($koneksi,"SELECT * FROM tb_gejala");
-                            	while ($datajika=mysqli_fetch_array($jika)) {
-                            		echo'<option value="'.$datajika['nama_gejala'].'">'.$datajika['nama_gejala'].'</option>';
-                            	}
-                            	?>
-                        	</select><br>	
+						<select class="form-control" name="tidak_tanya" id="tidak_tanya">
+							<option value=""></option>
+                            <?=get_gejala_option($_POST[tidak_tanya], true)?>
+                        </select><br>	
 
 						</td>
 					</tr>
@@ -179,15 +159,9 @@
 						<td width="300px" height="30px">TIDAK MAKA PENYAKIT</td>
 						<td width="300px" height="30px">
 							
-							<select class="form-control" name="ya_tanya">
-                            	<option></option>
-                            	<?php
-                            	include '../koneksi.php';
-                            	$jika = mysqli_query($koneksi,"SELECT * FROM tb_diagnosa");
-                            	while ($datajika=mysqli_fetch_array($jika)) {
-                            		echo'<option value="'.$datajika['nama_diagnosa'].'">'.$datajika['nama_diagnosa'].'</option>';
-                            	}
-                            	?>
+							<select class="form-control" name="tidak_diagnosa" id="tidak_diagnosa">
+								<option value=""></option>
+								<?=get_diagnosa_option($_POST[tidak_diagnosa])?>
                         	</select><br>
 						</td>
 					</tr>
