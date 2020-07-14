@@ -290,7 +290,7 @@
 				<td>
 					<a class="fa fa-pencil" title="Ubah Data" style="font-size:18px;" href="ubah_aturan.php?ID=<?php echo $row->ID?>"></a>
 					&ensp;
-					<a class="fa fa-trash" title="Hapus" style="font-size:18px;" onclick="return(confirm('Hapus Data?'))" href="aksi_hapus_penyakit.php?no=<?php echo $row->ID?>"></a>
+					<a class="fa fa-trash" title="Hapus" style="font-size:18px;" href="aksi_hapus_aturan.php?&ID=<?=$row->ID?>" onclick="return(confirm('Hapus Data?'))"></a>
 			    </td>
             </tr>
             <?php endforeach;?>
