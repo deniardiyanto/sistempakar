@@ -288,7 +288,7 @@
                     <a class="fa fa-trash" title="Hapus" style="font-size:18px;" href="aksi.php?act=pengetahuan_hapus&ID=<?=$row->ID?>" onclick="return confirm('Hapus data?')"></span></a>
                 </td> -->
 				<td>
-					<a class="fa fa-pencil" title="Ubah Data" style="font-size:18px;" href="ubah_aturan.php?no=<?php echo $row->ID?>"></a>
+					<a class="fa fa-pencil" title="Ubah Data" style="font-size:18px;" href="ubah_aturan.php?ID=<?php echo $row->ID?>"></a>
 					&ensp;
 					<a class="fa fa-trash" title="Hapus" style="font-size:18px;" onclick="return(confirm('Hapus Data?'))" href="aksi_hapus_penyakit.php?no=<?php echo $row->ID?>"></a>
 			    </td>

@@ -43,9 +43,9 @@ if($jika=='' || ($ya_tanya=='' && $ya_diagnosa=='') || ($tidak_tanya=='' && $tid
             if( $ya_tanya != '' )
                 $ya_diagnosa = '';
             if( $tidak_tanya != '' )
-                $tidak_diagnosa = '';
-            $db->query("UPDATE tb_pengetahuan SET jika='$jika', ya_tanya='$ya_tanya', ya_diagnosa='$ya_diagnosa', tidak_tanya='$tidak_tanya', tidak_diagnosa='$tidak_diagnosa' WHERE ID='$_GET[ID]'");
-			// 
+				$tidak_diagnosa = '';
+				$db->query("INSERT INTO tb_pengetahuan (jika, ya_tanya, ya_diagnosa, tidak_tanya, tidak_diagnosa) 
+                VALUES ('$jika', '$ya_tanya', '$ya_diagnosa', '$tidak_tanya', '$tidak_diagnosa')");
 			?>
 				<script type="text/javascript">
 					alert("Data Ditambahkan");

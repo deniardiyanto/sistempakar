@@ -5,10 +5,13 @@
 	}
 
 	include '../koneksi.php';
+	include '../../functions.php';
 
-	$ID  =$_GET['no'];
-	$query = "SELECT * FROM tb_pengetahuan WHERE ID='".$ID."'";
-	$hasil = mysqli_query($koneksi,$query);		
+	$row = $db->get_row("SELECT * FROM tb_pengetahuan WHERE ID='$_GET[ID]'"); 
+
+	// $ID  =$_GET['no'];
+	// $query = "SELECT * FROM tb_pengetahuan WHERE ID='".$ID."'";
+	// $hasil = mysqli_query($koneksi,$query);		
 ?>
 <html>
 <head>
@@ -59,29 +62,54 @@
 			</table>
 			<hr>
 			<div id="tambah">
-			<form action="aksi_ubah_admin.php" method="post"> 
-				<?php while($data=mysqli_fetch_assoc($hasil)){ ?>
+			<form action="aksi_ubah_aturan.php" method="post"> 
+				<?php //while($data=mysqli_fetch_assoc($hasil)){ ?>
 				<table class="text">
 					</tr>
 					<tr>
 						<td width="300px" height="30px">JIKA</td>
-						<td width="300px" height="30px"><input type="text" name="jika" placeholder="GEJALA" required="" class="form-control" value="<?php echo $data['jika'] ?>"></td>
+						<td width="300px" height="30px">
+						<select class="form-control" name="jika">
+							<option value=""></option>
+							<?=get_gejala_option($row->jika)?>
+						</select>
+						</td>
 					</tr>
 					<tr>
 						<td width="300px" height="30px">YA TANYA</td>
-						<td width="300px" height="30px"><input type="text" name="ya_tanya" placeholder="GEJALA" required="" readonly="" class="form-control" value="<?php echo $data['ya_tanya'] ?>"></td>
+						<td width="300px" height="30px">
+						<select class="form-control" name="ya_tanya">
+                            <option value=""></option>
+                            <?=get_gejala_option($row->ya_tanya, true)?>
+                        </select>
+						</td>
 					</tr>
 					<tr>
 						<td width="300px" height="30px">YA DIAGNOSA</td>
-						<td width="300px" height="30px"><input type="text" name="ya_diagnosa" placeholder="PENYAKIT" required="" readonly="" class="form-control" value="<?php echo $data['ya_diagnosa'] ?>"></td>
+						<td width="300px" height="30px">
+						<select class="form-control" name="ya_diagnosa">
+                            <option value=""></option>
+                            <?=get_diagnosa_option($row->ya_diagnosa)?>
+                        </select>
+						</td>
 					</tr>
 					<tr>
 						<td width="300px" height="30px">TIDAK TANYA</td>
-						<td width="300px" height="30px"><input type="text" name="tidak_tanya" placeholder="GEJALA" required="" readonly="" class="form-control" value="<?php echo $data['tidak_tanya'] ?>"></td>
+						<td width="300px" height="30px">
+						<select class="form-control" name="tidak_tanya">
+                            <option value=""></option>
+                            <?=get_gejala_option($row->tidak_tanya, true)?>
+                        </select>
+						</td>
 					</tr>
 					<tr>
 						<td width="300px" height="30px">TIDAK DIAGNOSA</td>
-						<td width="300px" height="30px"><input type="text" name="tidak_diagnosa" placeholder="PENYAKIT" required="" readonly="" class="form-control" value="<?php echo $data['tidak_diagnosa'] ?>"></td>
+						<td width="300px" height="30px">
+						<select class="form-control" name="tidak_diagnosa">
+                            <option value=""></option>
+                            <?=get_diagnosa_option($row->tidak_diagnosa)?>
+                        </select>
+						</td>
 					</tr>
 					
 					<tr>
@@ -92,7 +120,7 @@
 						</td>
 					</tr>
 				</table>
-				<?php } ?>
+				<?php  ?>
 			</form>
 			</div>
 		</div>
