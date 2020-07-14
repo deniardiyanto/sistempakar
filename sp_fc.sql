@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 13, 2020 at 04:33 AM
+-- Generation Time: Jul 14, 2020 at 08:23 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.6
 
@@ -62,7 +62,10 @@ INSERT INTO `pengguna` (`id_pengguna`, `nama_pengguna`, `jn_kelamin`, `umur`, `e
 ('P05', 'jayen', 'j', '6', 'jy@dogmail.com', NULL, NULL),
 ('P06', 'boboboy', 'j', '6', 'bbb@dogmail.com', NULL, NULL),
 ('P07', 'qw', 'b', '4', 'qw@dogmail.com', NULL, NULL),
-('P08', 'jj', 'b', '6', 'jij@mail.com', NULL, NULL);
+('P08', 'jj', 'b', '6', 'jij@mail.com', NULL, NULL),
+('P09', 'berbreny', 'b', '3', 'bbrt@dogmail.com', NULL, NULL),
+('P10', 'hery', 'j', '2', 'hr@dogmail.com', NULL, NULL),
+('P11', 'ppq', 'b', '5', 'ppq@dogmail.com', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -82,7 +85,7 @@ CREATE TABLE `tb_admin` (
 
 INSERT INTO `tb_admin` (`id_admin`, `username`, `password`) VALUES
 ('A1', 'admin', 'admin'),
-('A2', 'user', 'user');
+('A2', 'fajar', 'fajar');
 
 -- --------------------------------------------------------
 
@@ -245,10 +248,7 @@ INSERT INTO `tb_pengetahuan` (`ID`, `urut`, `jika`, `ya_tanya`, `ya_diagnosa`, `
 (106, 0, 'G018', 'G017', '', 'G014', ''),
 (107, 0, 'G017', 'G034', '', '', 'D06'),
 (108, 0, 'G034', '', 'D05', '', 'D07'),
-(109, 0, 'G014', '', 'D32', 'G035', ''),
-(110, 0, 'G035', 'G029', '', '', 'D31'),
-(111, 0, 'G029', 'G032', '', '', 'D21'),
-(112, 0, 'G032', '', 'D08', '', 'D09');
+(109, 0, 'G014', '', 'D32', 'G035', '');
 
 --
 -- Indexes for dumped tables
