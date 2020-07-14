@@ -139,7 +139,8 @@
 
 			<br>
 			<?php 
-			include '../koneksi.php';			
+			include '../koneksi.php';	
+			error_reporting(0);			
 
 			$query = "SELECT * FROM tb_admin";
 
