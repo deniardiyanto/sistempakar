@@ -66,6 +66,10 @@ include'../functions.php';
 						<a href="kelola aturan/kelola_aturan.php"><div class="menuadmin"><img class="img-thumbnail"
         				src="aturan.jpg"/><p class="mn">ATURAN</p></div></a>
 					</td>
+					<td width="250px" height="250px">
+						<a href="laporan.php"><div class="menuadmin"><img class="img-thumbnail"
+        				src="laporan-icon.png"/><p class="mn">LAPORAN</p></div></a>
+					</td>
 				</tr>
 			</table>
 		</div>
