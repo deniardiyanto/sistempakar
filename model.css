@@ -18,7 +18,7 @@ a {
 	background:
 		linear-gradient(rgba(0, 0, 0, 0.7),
 			rgba(0, 0, 0, 0.3)),
-		url(gambar/k3.jpg) no-repeat;
+		url(gambar/k3.jpg) no-repeat center center fixed;
 	background-size: cover;
 	position: relative;
 	overflow: hidden;
